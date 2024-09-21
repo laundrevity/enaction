@@ -35,7 +35,7 @@
     skipbelow=\topsep
 ]{customquote}
 
-\title{Adjunctive cognition: A topos-theoretic approach to enactivism}
+\title{Adjunctive cognition: A topos-theoretic framework for enactivism}
 \author{Conor L. Mahany\footnote{
     Email: conor.mahany@proton.me. The author is a hobbyist researcher in the field of cognitive science with a focus on enactivism and formal methods. Barring some unforeseen circumstances, the most recent version of this work can be found here \href{https://github.com/laundrevity/enaction/blob/master/enaction.pdf}{https://github.com/laundrevity/enaction/blob/master/enaction.pdf}.
 }}
@@ -48,7 +48,7 @@
 
 % Abstract
 \begin{abstract}
-    This work introduces a novel framework for understanding cognition by leveraging category theory and topos theory. Departing from traditional cognitivist models that emphasize internal representations of an external world, I express cognition as a dynamic interplay between action and perception as an adjunction. By treating the self as the initial object in the category of contexts, I draw parallels with the Buddhist concept of \emph{śūnyatā} (emptiness), offering an interdisciplinary perspective that bridges Western mathematical frameworks and Eastern philosophical thought. The framework is illustrated with concrete examples, and its implications for cognitive science, philosophy, and future research are discussed.
+    This work presents a novel framework for understanding cognition through the lens of category theory and topos theory. Moving beyond traditional cognitivist models that emphasize internal representations of an external world, cognition is reimagined here as a dynamic adjunction between action and perception. By conceptualizing the self as the initial object in a category of contexts, parallels are drawn to the Buddhist concept of \emph{śūnyatā} (emptiness), offering a bridge between Western mathematical structures and Eastern philosophical insights. Concrete examples illustrate the framework, and its implications for cognitive science, philosophy, and future research are explored.
 \end{abstract}
 
 \newpage
@@ -111,9 +111,9 @@
 % Section 1
 \section{Introduction}
 
-Understanding cognition remains one of the most challenging and profound quests in both science and philosophy. Traditional Western approaches often model cognition as the manipulation of internal representations of an external world, emphasizing a computational view of the mind. In contrast, enactivism, an emerging paradigm in cognitive science, posits that cognition arises through a dynamic interaction between an organism and its environment, without reliance on internal representations \cite{varela1991}.
+Understanding cognition remains one of the most challenging and profound quests in both science and philosophy. (Ramachandran holy grail?) Traditional Western approaches often model cognition as the manipulation of internal representations of an external world, emphasizing a computational view of the mind. In contrast, enactivism, an emerging paradigm in cognitive science, posits that cognition arises through a dynamic interaction between an organism and its environment, without reliance on internal representations \cite{varela1991}.
 
-In this work, I aim to provide a rigorous mathematical framework for enactivism by employing tools from category theory and topos theory. These mathematical structures make possible the expression of \textbf{cognition} --- the co-evolution of action and perception --- as an \textbf{adjunction}. This is the sense in which the essence of enaction is embodied. Furthermore, by conceptualizing the self as the initial object in the category of contexts, we find a natural correspondence with the Buddhist concept of \emph{śūnyatā} or emptiness \cite{garfield1995}.
+In this work, I aim to provide a rigorous mathematical framework for enactivism by employing tools from category theory and topos theory. These mathematical structures make possible the expression of \textbf{cognition} --- the co-evolution of action and perception --- as an \textbf{adjunction}. This is the sense in which the essence of enaction is embodied. By expressing the self as the initial object in the category of contexts, we find a natural correspondence with the Buddhist concept of \emph{śūnyatā} or emptiness \cite{garfield1995}.
 
 My goals in this work are threefold:
 
@@ -141,7 +141,11 @@ The paper is organized as follows:
 
 
 \section{Philosophical Motivation}
-philosophy of mind/logic/math historically: ... Frege, Russell, Wittgenstein, Kripke, Cohen, Chalmers
+There is something deeply human and relatable about the struggles throughout history to understand the human mind and its relation to the world.
+
+Discuss empty self as resolving subjectivism--nihilism tension in ancient Eastern philosophy
+
+then focus on western tradition: Locke/des Cartes -> Frege, Russell, Wittgenstein (Early -> Later), Kripke, Cohen, Chalmers, Dennett
 
 
 \subsection{Limitations of Representational Models}
@@ -164,14 +168,26 @@ Enactivism offers an alternative by proposing that cognition arises through an o
 seemingly inescapable rock and hard place: subjectivism (Tractatus) and nihilism (Philosophical Investigations).
 
 
-\subsection{Empty self and initial object}
+\subsection{\emph{Śūnyatā} and initial object}
+The initial object is the unique place where one can always start: that is, the unique\footnote{Up to unique isomorphism.} object $I$ (if it exists) in a category $\mathcal{C}$
+
+Objects in category theory can often be characterized (up to a unique isomorphism, generally) by \emph{universal properties}. As a simple example, pick a category $\mathcal{C}$ and consider the poset structure induced by $\mathcal{C}$, e.g., $X \leq X^{\prime} \iff X \to X^{\prime}$ is an arrow in $\mathcal{C}$. Then the \emph{initial object}
+
+One useful lesson of topos theory is to, whenever helpful, consider corresponding concepts in \textbf{Set}.
+
 empty self as interpreted as object corresponding to self is initial in category of contexts (like empty set is initial in category of sets) and hence topos theory
 
 
-\subsection{Maslow's hammer and Wigner's puzzle}
+\subsection{Law of the instrument and Wigner's puzzle}
+\begin{quotation}
+    The first point is that mathematical concepts turn up in entirely unexpected con- nections. Moreover, they often permit an unexpectedly close and accurate description of the phenomena in these connections. Secondly, just because of this circumstance, and because we do not understand the reasons of their usefulness, we cannot know whether a theory formulated in terms of mathematical concepts is uniquely appropriate. We are in a position similar to that of a man who was provided with a bunch of keys and who, having to open several doors in suc- cession, always hit on the right key on the first or second trial. He became skeptical concerning the uniqueness of the coordination between keys and doors.
+\end{quotation}
+
+Eugene Wigner, “The Unreasonable Effectiveness of Mathematics in the Natural Sciences,” in Communica- tions in Pure and Applied Mathematics, vol. 13, No. I (February 1960). New York: John Wiley \& Sons, Inc. Copyright 1960 by John Wiley \& Sons, Inc.
+
 law of the instrument => secret to wigner's puzzle: self and world (0 and 1) have reciprocal structure due to adjunction
 
-
+the idea is not to break the puzzle with our hammer but to understand the stuff-of-stuff and thereby craft a key
 
 \subsection{Preview}
 
@@ -522,7 +538,7 @@ We have presented a novel framework that expresses cognition as an adjunction be
 \section*{Acknowledgments}
 
 % Optional: Acknowledge individuals or institutions that contributed to the work.
-The author thanks Michael Smith, Sarah Schienman, Milo Korman, Jay Cullen, Jakob Lovhall, David ``Buddy'' Ryan, Wyatt Hope, Charles Hourihan and E. Glen Weyl for their participation in fruitful discussions surrounding these subjects.
+The author kindly thanks the University of Chicago's mathematics REU program --- and, in particular, Peter May --- for cultivating a wonderful environment for learning, in addition to Michael Smith, Sarah Schienman, Milo Korman, Jay Cullen, Jakob Lövhall, David ``Buddy'' Ryan, Wyatt Hope, Charles Hourihan and E. Glen Weyl for their sage counsel.
 
 % Example references. Replace with your actual references.
 \begin{thebibliography}{9}
