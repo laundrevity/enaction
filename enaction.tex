@@ -30,46 +30,55 @@
 
 \begin{document}
 
- 
+
 % Title
 \maketitle
 
 % Abstract
-\begin{abstract} 
-    This paper introduces a novel framework for understanding cognition by leveraging category theory and topos theory. Departing from traditional cognitivist models that emphasize internal representations of an external world, we conceptualize cognition as a dynamic interplay between action and perception, modeled as an adjunction between categories. By treating the self as the initial object in the category of contexts, we draw parallels with the Buddhist concept of \emph{śūnyatā} (emptiness), offering an interdisciplinary perspective that bridges Western mathematical frameworks and Eastern philosophical thought. We illustrate our framework with concrete examples and discuss its implications for cognitive science, philosophy, and future research. 
-    \end{abstract}
+\begin{abstract}
+    This paper introduces a novel framework for understanding cognition by leveraging category theory and topos theory. Departing from traditional cognitivist models that emphasize internal representations of an external world, we conceptualize cognition as a dynamic interplay between action and perception, modeled as an adjunction between categories. By treating the self as the initial object in the category of contexts, we draw parallels with the Buddhist concept of \emph{śūnyatā} (emptiness), offering an interdisciplinary perspective that bridges Western mathematical frameworks and Eastern philosophical thought. We illustrate our framework with concrete examples and discuss its implications for cognitive science, philosophy, and future research.
+\end{abstract}
 
 \newpage
 \begin{center}
-    If I were to say that the so-called philosophy of this fellow Hegel is a colossal piece of mystification which will yet provide posterity with an inexhaustible theme for laughter at our times, that it is a pseudo-philosophy paralyzing all mental powers, stifling all real thinking, and, by the most outrageous misuse of language, putting in its place the hollowest, most senseless, thoughtless, and, as is confirmed by its success, most stupefying verbiage, I should be quite right.\\
+    If I were to say that the so-called philosophy of this fellow Hegel is a colossal piece of mystification which will yet provide posterity with an inexhaustible theme for laughter at our times, that it is a pseudo-philosophy paralyzing all mental powers, stifling all real thinking, and, by the most outrageous misuse of language, putting in its place the \emph{hollowest}\footnote{Emphasis \emph{emphatically} added.}, most senseless, thoughtless, and, as is confirmed by its success, most stupefying verbiage, \textbf{I should be quite right}.\\
     \vspace{0.25cm}
-    Further, if I were to say that this summus philosophus … scribbled nonsense quite unlike any mortal before him, so that whoever could read his most eulogized work, the so-called \emph{Phenomenology of Spirit}, without feeling as if he were in a madhouse, would qualify as an inmate for Bedlam, I should be no less right.
-\vspace{0.5cm}
+    Further, if I were to say that this summus philosophus … scribbled nonsense quite unlike any mortal before him, so that whoever could read his most eulogized work, the so-called \emph{Phenomenology of Spirit}, without feeling as if he were in a madhouse, would qualify as an inmate for Bedlam, \textbf{I should be no less right}.
+    \vspace{0.5cm}
 
-—Arthur Schopenhauer, \emph{On the Basis of Morality} (1839)
+    — Arthur Schopenhauer, \emph{On the Basis of Morality} (1839)
 \end{center}
 
-\vspace{2cm} % Add some vertical space between quotes
+\vspace{5px} % Add some vertical space between quotes
 
 \begin{center}
-The slogan is ``Adjoint functors arise everywhere''. \\
+    The slogan is ``\textbf{Adjoint functors arise everywhere}''. \\
 
-\vspace{0.5cm}
-—Saunders Mac Lane, \emph{Categories for the Working Mathematician} (1971)
+    \vspace{0.5cm}
+    — Saunders Mac Lane, \emph{Categories for the Working Mathematician} (1971)
 \end{center}
 
-\vspace{2cm} % Add some vertical space between quotes
+\vspace{5px}
 
 \begin{center}
-Form is emptiness, emptiness is form.\\
+    But just as the Madhyamaka dialectic, a provisional and conventional activity of the relative world, points beyond itself, so we might hope that our concept of enaction could, at least for some cognitive scientists and perhaps even for the more general milieu of scientific thought, point beyond itself to \textbf{a truer understanding of groundlessness}.
 
-\vspace{0.5cm}
-—Heart Sūtra of the Mahayana Buddhist tradition
+    \vspace{0.5cm}
+    — Varela, Thompson, \& Rosch, \emph{The Embodied Mind} (1991) \cite{varela1991}
+\end{center}
+
+\vspace{5px} % Add some vertical space between quotes
+
+\begin{center}
+    \textbf{Form is emptiness, emptiness is form.}\\
+
+    \vspace{0.5cm}
+    — \emph{Heart Sūtra} of the Mahayana Buddhist traditions
 \end{center}
 
 \newpage
 
- 
+
 
 
 % Table of contents
@@ -84,10 +93,10 @@ In this paper, we aim to provide a rigorous mathematical framework for enactivis
 
 Our goals in this paper are threefold:
 
-\begin{enumerate} 
-\item To introduce and justify the use of category theory and topos theory in modeling cognitive processes.
-\item To provide concrete examples that illustrate how action and perception can be modeled as functors between categories.
-\item To discuss the philosophical implications of this framework, especially the connection between the empty self and \emph{śūnyatā}, and its impact on cognitive science.
+\begin{enumerate}
+    \item To introduce and justify the use of category theory and topos theory in modeling cognitive processes.
+    \item To provide concrete examples that illustrate how action and perception can be modeled as functors between categories.
+    \item To discuss the philosophical implications of this framework, especially the connection between the empty self and \emph{śūnyatā}, and its impact on cognitive science.
 
 \end{enumerate}
 
@@ -95,15 +104,15 @@ Our goals in this paper are threefold:
 
 The paper is organized as follows:
 
-\begin{itemize} 
-\item In Section 2, we provide the philosophical motivation for our approach, discussing the limitations of representational models and introducing enactivism. 
-\item Section 3 introduces the necessary mathematical background in category theory and topos theory, with intuitive explanations and examples. 
-\item In Section 4, we develop our main framework, modeling enaction as an adjunction between the categories of contexts and behaviors. 
-\item Section 5 revisits the concept of the self as the initial object and explores its connection to \emph{śūnyatā}. 
-\item Section 6 discusses the implications of our framework for cognitive science and philosophy. 
-\item In Section 7, we relate our work to existing literature, highlighting similarities and differences. 
-\item Section 8 outlines future research directions, including empirical validation and further theoretical development. 
-\item We conclude in Section 9 by summarizing our findings and their significance. 
+\begin{itemize}
+    \item In Section 2, we provide the philosophical motivation for our approach, discussing the limitations of representational models and introducing enactivism.
+    \item Section 3 introduces the necessary mathematical background in category theory and topos theory, with intuitive explanations and examples.
+    \item In Section 4, we develop our main framework, modeling enaction as an adjunction between the categories of contexts and behaviors.
+    \item Section 5 revisits the concept of the self as the initial object and explores its connection to \emph{śūnyatā}.
+    \item Section 6 discusses the implications of our framework for cognitive science and philosophy.
+    \item In Section 7, we relate our work to existing literature, highlighting similarities and differences.
+    \item Section 8 outlines future research directions, including empirical validation and further theoretical development.
+    \item We conclude in Section 9 by summarizing our findings and their significance.
 \end{itemize}
 
 
@@ -117,10 +126,10 @@ Wittgenstein had notable objections, especially in his \emph{Philosophical Inves
 
 Traditional cognitive science often relies on the assumption that cognition involves internal representations of an external world. This view, rooted in computationalism, treats the mind as a symbol-manipulating system \cite{fodor1980}. However, this model faces several challenges:
 
-\begin{itemize} 
-\item Frame Problem: Determining which aspects of a complex environment are relevant to a given context is computationally intractable \cite{pylyshyn1987}. 
-\item Embodiment: It neglects the role of the body and the environment in shaping cognitive processes \cite{clark1997}. 
-\item Dynamic Interaction: It fails to account for the continuous and reciprocal interaction between an organism and its environment \cite{thompson2007}. 
+\begin{itemize}
+    \item Frame Problem: Determining which aspects of a complex environment are relevant to a given context is computationally intractable \cite{pylyshyn1987}.
+    \item Embodiment: It neglects the role of the body and the environment in shaping cognitive processes \cite{clark1997}.
+    \item Dynamic Interaction: It fails to account for the continuous and reciprocal interaction between an organism and its environment \cite{thompson2007}.
 \end{itemize}
 
 \subsection{Enactivism}
@@ -137,39 +146,38 @@ While enactivism provides a compelling philosophical perspective, it lacks a rig
 
 Topos theory offers a generalization of set theory and its foundations. Here, the fundamental relation is not the structural, hierarchical relation $\in$ of set membership but the arrow $X \to Y$ between objects. Topos theory also provides an abstract description and generalization of point-set topology, encapsulating the notion of local determination through (pre)sheaves and context-dependent truth. The quintessential image is that of a function $f \colon X \to \mathbb{R}$ which is continuous when restricted to some open subset $U \subset X$.
 
-In what follows, I will illustrate that  
+In what follows, I will illustrate that
 \[
-\begin{tikzcd}
-& \{ x \mid \varphi(x) \}  \arrow[r] \arrow[d, tail] & 1 \arrow[d, tail, "\text{true}"] \\
-U \arrow[r, "\alpha"] \arrow[ru, dashed, "m"] & X \arrow[r, "\varphi(x)"] & \Omega
-\end{tikzcd}
+    \begin{tikzcd}
+        & \{ x \mid \varphi(x) \}  \arrow[r] \arrow[d, tail] & 1 \arrow[d, tail, "\text{true}"] \\
+        U \arrow[r, "\alpha"] \arrow[ru, dashed, "m"] & X \arrow[r, "\varphi(x)"] & \Omega
+    \end{tikzcd}
 \]
-is a representation of local truth. Let $\mathcal{C}$ denote the category of contexts and let $\mathcal{B}$ denote the category of behaviors. Then, enaction is modeled as an adjunction $\mathcal{A} \dashv \mathcal{P}$, where action is a functor $\mathcal{A} \colon \mathcal{C} \to \mathcal{B}$ and perception is a functor $\mathcal{P} \colon \mathcal{B} \to \mathcal{C}$. That is, enaction consists of a bijection 
+is a very general expression of local truth. Let $\mathcal{C}$ denote the category of contexts and let $\mathcal{B}$ denote the category of behaviors. Then, enaction is modeled as an adjunction $\mathcal{A} \dashv \mathcal{P}$, where action is a functor $\mathcal{A} \colon \mathcal{C} \to \mathcal{B}$ and perception is a functor $\mathcal{P} \colon \mathcal{B} \to \mathcal{C}$. That is, enaction consists of a bijection
 \[
-\phi_{CB} \colon \text{Hom} ( \mathcal{A}(C), B ) \to \text{Hom}(C, \mathcal{P}(B))
+    \phi_{CB} \colon \text{Hom} ( \mathcal{A}(C), B ) \to \text{Hom}(C, \mathcal{P}(B))
 \]
 that is natural in both $C$ and $B$, for any context $C$ and behavior $B$. In other words, each morphism $\mathcal{A}(C) \to B$ of behaviors is \emph{enacted} by a unique morphism $C \to \mathcal{P}(B)$ of contexts.
 
 
 \section{Mathematics}
-
 In this section, we introduce the mathematical concepts necessary for our framework, aiming to make them accessible through intuitive explanations and examples.
 
 \subsection{Category Theory}
 
 \begin{definition}
-A \textbf{category} $\mathcal{C}$ consists of:
-\begin{enumerate}[label=(\alph*)]
-    \item A collection of \textbf{objects} $X, Y, Z, \dots$.
-    \item For each pair of objects $X$ and $Y$, a collection of \textbf{morphisms} (or \textbf{arrows}) $f \colon X \to Y$.
-    \item For each object $X$, an \textbf{identity morphism} $1_X \colon X \to X$.
-    \item A \textbf{composition law} that assigns to each pair of morphisms $f \colon X \to Y$ and $g \colon Y \to Z$ a morphism $g \circ f \colon X \to Z$.
-\end{enumerate}
-These must satisfy the following axioms:
-\begin{enumerate}
-    \item \textbf{Associativity}: For morphisms $f \colon W \to X$, $g \colon X \to Y$, and $h \colon Y \to Z$, we have $h \circ (g \circ f) = (h \circ g) \circ f$.
-    \item \textbf{Identity}: For every morphism $f \colon X \to Y$, $1_Y \circ f = f$ and $f \circ 1_X = f$.
-\end{enumerate}
+    A \textbf{category} $\mathcal{C}$ consists of:
+    \begin{enumerate}[label=(\alph*)]
+        \item A collection of \textbf{objects} $X, Y, Z, \dots$.
+        \item For each pair of objects $X$ and $Y$, a collection of \textbf{morphisms} (or \textbf{arrows}) $f \colon X \to Y$.
+        \item For each object $X$, an \textbf{identity morphism} $1_X \colon X \to X$.
+        \item A \textbf{composition law} that assigns to each pair of morphisms $f \colon X \to Y$ and $g \colon Y \to Z$ a morphism $g \circ f \colon X \to Z$.
+    \end{enumerate}
+    These must satisfy the following axioms:
+    \begin{enumerate}
+        \item \textbf{Associativity}: For morphisms $f \colon W \to X$, $g \colon X \to Y$, and $h \colon Y \to Z$, we have $h \circ (g \circ f) = (h \circ g) \circ f$.
+        \item \textbf{Identity}: For every morphism $f \colon X \to Y$, $1_Y \circ f = f$ and $f \circ 1_X = f$.
+    \end{enumerate}
 \end{definition}
 
 A prototypical example of a category is $\mathbf{Set}$, the category whose objects are sets and whose morphisms are functions between sets.
@@ -177,60 +185,62 @@ A prototypical example of a category is $\mathbf{Set}$, the category whose objec
 \subsubsection{Specific Categories}
 
 \begin{definition}
-Let $\mathbf{Con}$ denote the \textbf{category of contexts}, where:
-\begin{enumerate}
-    \item \textbf{Objects}: Each object is a moment of conscious experience.
-    \item \textbf{Morphisms}: Arrows represent causal structures or transitions between contexts.
-\end{enumerate}
+    Let $\mathbf{Con}$ denote the \textbf{category of contexts}, where:
+    \begin{enumerate}
+        \item \textbf{Objects}: Each object is a moment of conscious experience.
+        \item \textbf{Morphisms}: Arrows represent causal structures or transitions between contexts.
+    \end{enumerate}
 \end{definition}
 
 \begin{definition}
-Let $\mathbf{Beh}$ denote the \textbf{category of behaviors}, where:
-\begin{enumerate}
-    \item \textbf{Objects}: Each object is a behavior in lived experience.
-    \item \textbf{Morphisms}: Arrows represent causal structures or transitions between behaviors.
-\end{enumerate}
+    Let $\mathbf{Beh}$ denote the \textbf{category of behaviors}, where:
+    \begin{enumerate}
+        \item \textbf{Objects}: Each object is a behavior in lived experience.
+        \item \textbf{Morphisms}: Arrows represent causal structures or transitions between behaviors.
+    \end{enumerate}
 \end{definition}
 
-These categories serve as the foundational structures for modeling the dynamics of cognition as an interplay between contexts and behaviors.
+These categories serve as the foundational structures for expressing the dynamics of cognition as an interplay between action and perception.
 
 \subsubsection{Functors}
 
 \begin{definition} A \textbf{functor} $F \colon \mathcal{C} \to \mathcal{D}$ between categories $\mathcal{C}$ and $\mathcal{D}$ assigns:
 
-\begin{itemize} \item To each object $X$ in $\mathcal{C}$, an object $F(X)$ in $\mathcal{D}$. \item To each morphism $f \colon X \to Y$ in $\mathcal{C}$, a morphism $F(f) \colon F(X) \to F(Y)$ in $\mathcal{D}$. \end{itemize}
+    \begin{itemize} \item To each object $X$ in $\mathcal{C}$, an object $F(X)$ in $\mathcal{D}$. \item To each morphism $f \colon X \to Y$ in $\mathcal{C}$, a morphism $F(f) \colon F(X) \to F(Y)$ in $\mathcal{D}$. \end{itemize}
 
-Such that:
+    Such that:
 
-\begin{enumerate} \item $F(\text{id}_X) = \text{id}_{F(X)}$. \item $F(g \circ f) = F(g) \circ F(f)$. \end{enumerate} \end{definition}
+    \begin{enumerate} \item $F(\text{id}_X) = \text{id}_{F(X)}$. \item $F(g \circ f) = F(g) \circ F(f)$. \end{enumerate} \end{definition}
+
+Functors are structure preserving arrows between categories in the sense that they commute with composition.
 
 \subsection{Limits and Colimits}
 
 Understanding limits and colimits is essential for grasping the structural aspects of categories that model cognitive processes.
 
 \begin{definition}
-A \textbf{limit} of a diagram $D \colon \mathcal{J} \to \mathcal{C}$ in a category $\mathcal{C}$ is a universal cone to $D$. Concretely, it consists of an object $L$ in $\mathcal{C}$ and a family of morphisms $\{\pi_j \colon L \to D(j)\}_{j \in \mathcal{J}}$ such that for every morphism $f \colon j \to k$ in $\mathcal{J}$, $D(f) \circ \pi_j = \pi_k$. Moreover, for any other cone $(N, \{\phi_j \colon N \to D(j)\})$, there exists a unique morphism $u \colon N \to L$ such that $\pi_j \circ u = \phi_j$ for all $j \in \mathcal{J}$.
+    A \textbf{limit} of a diagram $D \colon \mathcal{J} \to \mathcal{C}$ in a category $\mathcal{C}$ is a universal cone to $D$. Concretely, it consists of an object $L$ in $\mathcal{C}$ and a family of morphisms $\{\pi_j \colon L \to D(j)\}_{j \in \mathcal{J}}$ such that for every morphism $f \colon j \to k$ in $\mathcal{J}$, $D(f) \circ \pi_j = \pi_k$. Moreover, for any other cone $(N, \{\phi_j \colon N \to D(j)\})$, there exists a unique morphism $u \colon N \to L$ such that $\pi_j \circ u = \phi_j$ for all $j \in \mathcal{J}$.
 \end{definition}
 
 \begin{definition}
-A \textbf{colimit} is the dual notion of a limit. It is a universal cocone from a diagram $D \colon \mathcal{J} \to \mathcal{C}$.
+    A \textbf{colimit} is the dual notion of a limit. It is a universal cocone from a diagram $D \colon \mathcal{J} \to \mathcal{C}$.
 \end{definition}
 
 \subsubsection{Finite Limits}
 
 \begin{definition}
-A category $\mathcal{C}$ has \textbf{finite limits} if it has all limits of finite diagrams. This includes the existence of products, equalizers, and a terminal object.
+    A category $\mathcal{C}$ has \textbf{finite limits} if it has all limits of finite diagrams. This includes the existence of products, equalizers, and a terminal object.
 \end{definition}
 
 \begin{definition}
-A \textbf{pullback} (or fibered product) of two morphisms $f \colon X \to Z$ and $g \colon Y \to Z$ in a category $\mathcal{C}$ is a limit of the diagram consisting of $X$, $Y$, and $Z$ with $f$ and $g$ as the morphisms to $Z$. It is denoted by:
-\[
-\begin{tikzcd}
-P \arrow[r] \arrow[d] & Y \arrow[d, "g"] \\
-X \arrow[r, "f"] & Z
-\end{tikzcd}
-\]
-where $P$ is the pullback object.
+    A \textbf{pullback} (or fibered product) of two morphisms $f \colon X \to Z$ and $g \colon Y \to Z$ in a category $\mathcal{C}$ is a limit of the diagram consisting of $X$, $Y$, and $Z$ with $f$ and $g$ as the morphisms to $Z$. It is denoted by:
+    \[
+        \begin{tikzcd}
+            P \arrow[r] \arrow[d] & Y \arrow[d, "g"] \\
+            X \arrow[r, "f"] & Z
+        \end{tikzcd}
+    \]
+    where $P$ is the pullback object.
 \end{definition}
 
 In $\mathbf{Set}$, the pullback of $f$ and $g$ is the set $\{ (x,y) \in X \times Y \mid f(x) = g(y) \}$.
@@ -238,11 +248,11 @@ In $\mathbf{Set}$, the pullback of $f$ and $g$ is the set $\{ (x,y) \in X \times
 \subsection{Monomorphisms and Epimorphisms}
 
 \begin{definition}
-A morphism $f \colon X \to Y$ in a category $\mathcal{C}$ is a \textbf{monomorphism} (or \textbf{mono}) if for all objects $Z$ and all pairs of morphisms $g_1, g_2 \colon Z \to X$, $f \circ g_1 = f \circ g_2$ implies $g_1 = g_2$.
+    A morphism $f \colon X \to Y$ in a category $\mathcal{C}$ is a \textbf{monomorphism} (or \textbf{mono}) if for all objects $Z$ and all pairs of morphisms $g_1, g_2 \colon Z \to X$, $f \circ g_1 = f \circ g_2$ implies $g_1 = g_2$.
 \end{definition}
 
 \begin{definition}
-A morphism $f \colon X \to Y$ in a category $\mathcal{C}$ is an \textbf{epimorphism} (or \textbf{epi}) if for all objects $Z$ and all pairs of morphisms $g_1, g_2 \colon Y \to Z$, $g_1 \circ f = g_2 \circ f$ implies $g_1 = g_2$.
+    A morphism $f \colon X \to Y$ in a category $\mathcal{C}$ is an \textbf{epimorphism} (or \textbf{epi}) if for all objects $Z$ and all pairs of morphisms $g_1, g_2 \colon Y \to Z$, $g_1 \circ f = g_2 \circ f$ implies $g_1 = g_2$.
 \end{definition}
 
 In $\mathbf{Set}$, monomorphisms are injective functions, and epimorphisms are surjective functions.
@@ -250,27 +260,27 @@ In $\mathbf{Set}$, monomorphisms are injective functions, and epimorphisms are s
 \subsection{Equalizers and Coequalizers}
 
 \begin{definition}
-Given two parallel morphisms $f, g \colon X \rightrightarrows Y$ in a category $\mathcal{C}$, an \textbf{equalizer} of $f$ and $g$ is a morphism $e \colon E \to X$ such that $f \circ e = g \circ e$, and for any morphism $m \colon M \to X$ with $f \circ m = g \circ m$, there exists a unique morphism $u \colon M \to E$ such that $e \circ u = m$.
+    Given two parallel morphisms $f, g \colon X \rightrightarrows Y$ in a category $\mathcal{C}$, an \textbf{equalizer} of $f$ and $g$ is a morphism $e \colon E \to X$ such that $f \circ e = g \circ e$, and for any morphism $m \colon M \to X$ with $f \circ m = g \circ m$, there exists a unique morphism $u \colon M \to E$ such that $e \circ u = m$.
 \end{definition}
 
 \begin{definition}
-A \textbf{coequalizer} of two parallel morphisms $f, g \colon X \rightrightarrows Y$ is a morphism $q \colon Y \to Q$ such that $q \circ f = q \circ g$, and for any morphism $m \colon Y \to M$ with $m \circ f = m \circ g$, there exists a unique morphism $u \colon Q \to M$ such that $u \circ q = m$.
+    A \textbf{coequalizer} of two parallel morphisms $f, g \colon X \rightrightarrows Y$ is a morphism $q \colon Y \to Q$ such that $q \circ f = q \circ g$, and for any morphism $m \colon Y \to M$ with $m \circ f = m \circ g$, there exists a unique morphism $u \colon Q \to M$ such that $u \circ q = m$.
 \end{definition}
 
 \subsection{Subobjects and Subobject Classifier}
 
 \begin{definition}
-A \textbf{subobject} of an object $X$ in a category $\mathcal{C}$ is an equivalence class of monomorphisms into $X$, where two monomorphisms $f \colon A \to X$ and $g \colon B \to X$ are considered equivalent if there exists an isomorphism $h \colon A \to B$ such that $f = g \circ h$.
+    A \textbf{subobject} of an object $X$ in a category $\mathcal{C}$ is an equivalence class of monomorphisms into $X$, where two monomorphisms $f \colon A \to X$ and $g \colon B \to X$ are considered equivalent if there exists an isomorphism $h \colon A \to B$ such that $f = g \circ h$.
 \end{definition}
 
 \begin{definition}
-A \textbf{subobject classifier} in a category $\mathcal{C}$ is an object $\Omega$ together with a monomorphism $\top \colon 1 \to \Omega$ such that for every monomorphism $m \colon A \to X$, there exists a unique morphism $\chi_m \colon X \to \Omega$ making the following diagram a pullback:
-\[
-\begin{tikzcd}
-A \arrow[r, "m"] \arrow[d] & X \arrow[d, "\chi_m"] \\
-1 \arrow[r, "\top"] & \Omega
-\end{tikzcd}
-\]
+    A \textbf{subobject classifier} in a category $\mathcal{C}$ is an object $\Omega$ together with a monic $\text{true} \colon 1 \to \Omega$ such that for every subobject of $X$, represented by some monic $m \colon A \to X$, there exists a unique morphism $\chi_m \colon X \to \Omega$ making the following diagram a pullback:
+    \[
+        \begin{tikzcd}
+            A \arrow[r] \arrow[d, tail, "m"] & 1 \arrow[d, tail, "\text{true}"] \\
+            X \arrow[r, "\chi_m"] & \Omega
+        \end{tikzcd}
+    \]
 \end{definition}
 
 In $\mathbf{Set}$, the subobject classifier is the two-element set $1 + 1 = \{\text{true}, \text{false}\}$, and $\chi_m$ maps each element of $X$ to $\text{true}$ if it is in the subset $A$ and to $\text{false}$ otherwise.
@@ -278,12 +288,12 @@ In $\mathbf{Set}$, the subobject classifier is the two-element set $1 + 1 = \{\t
 \subsection{Topos Theory}
 
 \begin{definition}
-A \textbf{topos} $\mathcal{E}$ is a category that satisfies the following properties:
-\begin{enumerate}
-    \item $\mathcal{E}$ has all finite limits.
-    \item $\mathcal{E}$ has exponentials; that is, for any objects $X$ and $Y$ in $\mathcal{E}$, there exists an exponential object $Y^X$.
-    \item $\mathcal{E}$ has a subobject classifier $\Omega$.
-\end{enumerate}
+    A \textbf{topos} $\mathcal{E}$ is a category that satisfies the following properties:
+    \begin{enumerate}
+        \item $\mathcal{E}$ has all finite limits.
+        \item $\mathcal{E}$ has exponentials; that is, for any objects $X$ and $Y$ in $\mathcal{E}$, there exists an exponential object $Y^X$.
+        \item $\mathcal{E}$ has a subobject classifier $\Omega$.
+    \end{enumerate}
 \end{definition}
 
 Topos theory generalizes set theory and provides a framework for mathematical logic and geometry. A topos can be seen as a universe of varying contexts, each equipped with its own internal logic.
@@ -295,11 +305,11 @@ Each topos $\mathcal{E}$ has an internal language that is intuitionistic, meanin
 \subsubsection{Sheaves and Presheaves}
 
 \begin{definition}
-A \textbf{presheaf} on a category $\mathcal{C}$ is a functor $F \colon \mathcal{C}^{\text{op}} \to \mathbf{Set}$.
+    A \textbf{presheaf} on a category $\mathcal{C}$ is a functor $F \colon \mathcal{C}^{\text{op}} \to \mathbf{Set}$.
 \end{definition}
 
 \begin{definition}
-A \textbf{sheaf} on a topological space $X$ is a presheaf that satisfies the sheaf axioms, which ensure that local data can be uniquely glued together to form global data.
+    A \textbf{sheaf} on a topological space $X$ is a presheaf that satisfies the sheaf axioms, which ensure that local data can be uniquely glued together to form global data.
 \end{definition}
 
 Sheaf theory provides a way to systematically track locally defined data attached to the open sets of a topological space, enabling the formalization of context-dependent truth.
@@ -307,15 +317,15 @@ Sheaf theory provides a way to systematically track locally defined data attache
 \subsection{Adjunctions in Category Theory}
 
 \begin{definition}
-An \textbf{adjunction} between two categories $\mathcal{C}$ and $\mathcal{D}$ consists of two functors:
-\[
-\mathcal{A} \colon \mathcal{C} \to \mathcal{D} \quad \text{and} \quad \mathcal{P} \colon \mathcal{D} \to \mathcal{C}
-\]
-and a natural bijection
-\[
-\phi_{CB} \colon \text{Hom}_{\mathcal{D}} ( \mathcal{A}(C), B ) \cong \text{Hom}_{\mathcal{C}} (C, \mathcal{P}(B))
-\]
-for all objects $C$ in $\mathcal{C}$ and $B$ in $\mathcal{D}$.
+    An \textbf{adjunction} between two categories $\mathcal{C}$ and $\mathcal{D}$ consists of two functors:
+    \[
+        \mathcal{A} \colon \mathcal{C} \to \mathcal{D} \quad \text{and} \quad \mathcal{P} \colon \mathcal{D} \to \mathcal{C}
+    \]
+    and a natural bijection
+    \[
+        \phi_{CB} \colon \text{Hom}_{\mathcal{D}} ( \mathcal{A}(C), B ) \cong \text{Hom}_{\mathcal{C}} (C, \mathcal{P}(B))
+    \]
+    for all objects $C$ in $\mathcal{C}$ and $B$ in $\mathcal{D}$.
 \end{definition}
 
 In this context, $\mathcal{A}$ is the \textbf{left adjoint} and $\mathcal{P}$ is the \textbf{right adjoint} and we write $\mathcal{A} \dashv \mathcal{P}$.
@@ -326,20 +336,20 @@ In this context, $\mathcal{A}$ is the \textbf{left adjoint} and $\mathcal{P}$ is
 
 \begin{definition} The category $\mathbf{Con}$ (Contexts):
 
-\begin{itemize} 
-\item \textbf{Objects}: Contexts or situations in which cognition occurs. 
-\item \textbf{Arrows}: Transitions or relationships between contexts. 
-\end{itemize} 
+    \begin{itemize}
+        \item \textbf{Objects}: Contexts or situations in which cognition occurs.
+        \item \textbf{Arrows}: Transitions or relationships between contexts.
+    \end{itemize}
 \end{definition}
 
 \begin{example} A context could be a visual scene, and a morphism could represent the act of shifting attention within that scene. \end{example}
 
 \begin{definition} The category $\mathbf{Beh}$ (Behaviors):
 
-\begin{itemize} 
-\item \textbf{Objects}: Behaviors or actions taken by an agent. 
-\item \textbf{Arrows}: Processes transforming one behavior into another. 
-\end{itemize} 
+    \begin{itemize}
+        \item \textbf{Objects}: Behaviors or actions taken by an agent.
+        \item \textbf{Arrows}: Processes transforming one behavior into another.
+    \end{itemize}
 \end{definition}
 
 \begin{example} A behavior could be reaching for an object, and a morphism could represent the modification of that action due to environmental feedback. \end{example}
@@ -347,9 +357,9 @@ In this context, $\mathcal{A}$ is the \textbf{left adjoint} and $\mathcal{P}$ is
 \subsection{Modeling action and perception as functors}
 We model action and perception as functors between these categories:
 
-\begin{itemize} 
-\item \textbf{Action Functor} $\mathcal{A} \colon \mathbf{Con} \to \mathbf{Beh}$: Maps contexts to behaviors. 
-\item \textbf{Perception Functor} $\mathcal{P} \colon \mathbf{Beh} \to \mathbf{Con}$: Maps behaviors to resulting contexts. 
+\begin{itemize}
+    \item \textbf{Action Functor} $\mathcal{A} \colon \mathbf{Con} \to \mathbf{Beh}$: Maps contexts to behaviors.
+    \item \textbf{Perception Functor} $\mathcal{P} \colon \mathbf{Beh} \to \mathbf{Con}$: Maps behaviors to resulting contexts.
 \end{itemize}
 
 \subsection{Establishing the Adjunction}
@@ -357,14 +367,14 @@ We model action and perception as functors between these categories:
 The adjunction $\mathcal{A} \dashv \mathcal{P}$ captures the reciprocal relationship between action and perception.
 
 \begin{theorem}
-For any context $C$ and behavior $B$ there is a bijection
-\[
-\phi_{C, B} \colon \text{Hom}_{\textbf{Beh}} ( \mathcal{A} (C), B) \cong Hom_{\textbf{Con}} (C, \mathcal{P}(B))
-\]
-between such behavioral and contextual transformations that is natural in both $C$ and $B$.
+    For any context $C$ and behavior $B$ there is a bijection
+    \[
+        \phi_{C, B} \colon \text{Hom}_{\textbf{Beh}} ( \mathcal{A} (C), B) \cong Hom_{\textbf{Con}} (C, \mathcal{P}(B))
+    \]
+    between such behavioral and contextual transformations that is natural in both $C$ and $B$.
 \end{theorem}
 \begin{proof}
-This is straight up the definition of $\mathcal{A} \dashv \mathcal{P}$.
+    This is straight up the definition of $\mathcal{A} \dashv \mathcal{P}$.
 \end{proof}
 
 This adjunction formalizes the idea that actions are generated from contexts and, in turn, behaviors influence subsequent contexts through perception. It embodies the enactivist view that cognition is a continuous loop of action and perception.
@@ -476,25 +486,25 @@ The author thanks ChatGPT, especially the models 4o and o1-preview.
 % Example references. Replace with your actual references.
 \begin{thebibliography}{9}
 
-\bibitem{varela1991}
-Varela, F. J., Thompson, E., \& Rosch, E. (1991). \textit{The Embodied Mind: Cognitive Science and Human Experience}. MIT Press.
+    \bibitem{varela1991}
+    Varela, F. J., Thompson, E., \& Rosch, E. (1991). \textit{The Embodied Mind: Cognitive Science and Human Experience}. MIT Press.
 
-\bibitem{garfield1995} 
-Garfield, J. L. (1995). \textit{The Fundamental Wisdom of the Middle Way: Nāgārjuna's Mūlamadhyamakakārikā}. Oxford University Press.
+    \bibitem{garfield1995}
+    Garfield, J. L. (1995). \textit{The Fundamental Wisdom of the Middle Way: Nāgārjuna's Mūlamadhyamakakārikā}. Oxford University Press.
 
-\bibitem{clark1997} Clark, A. (1997). \textit{Being There: Putting Brain, Body, and World Together Again}. MIT Press.
+    \bibitem{clark1997} Clark, A. (1997). \textit{Being There: Putting Brain, Body, and World Together Again}. MIT Press.
 
-\bibitem{fodor1980} Fodor, J. A. (1980). \textit{Methodological Solipsism Considered as a Research Strategy in Cognitive Psychology}. Behavioral and Brain Sciences, 3(1), 63-73.
+    \bibitem{fodor1980} Fodor, J. A. (1980). \textit{Methodological Solipsism Considered as a Research Strategy in Cognitive Psychology}. Behavioral and Brain Sciences, 3(1), 63-73.
 
-\bibitem{thompson2007} Thompson, E. (2007). \textit{Mind in Life: Biology, Phenomenology, and the Sciences of Mind}. Harvard University Press.
+    \bibitem{thompson2007} Thompson, E. (2007). \textit{Mind in Life: Biology, Phenomenology, and the Sciences of Mind}. Harvard University Press.
 
-\bibitem{pylyshyn1987} Pylyshyn, Z. W. (1987). \textit{The Robot's Dilemma: The Frame Problem in Artificial Intelligence}. Ablex Publishing.
+    \bibitem{pylyshyn1987} Pylyshyn, Z. W. (1987). \textit{The Robot's Dilemma: The Frame Problem in Artificial Intelligence}. Ablex Publishing.
 
-\bibitem{thompson2007} Thompson, E. (2007). \textit{Mind in Life: Biology, Phenomenology, and the Sciences of Mind}. Harvard University Press.
+    \bibitem{thompson2007} Thompson, E. (2007). \textit{Mind in Life: Biology, Phenomenology, and the Sciences of Mind}. Harvard University Press.
 
-\bibitem{wittgenstein1953} Wittgenstein, L. (1953). \textit{Philosophical Investigations}. Blackwell Publishing.
+    \bibitem{wittgenstein1953} Wittgenstein, L. (1953). \textit{Philosophical Investigations}. Blackwell Publishing.
 
-\bibitem{heidegger1962} Heidegger, M. (1962). \textit{Being and Time}. (J. Macquarrie, E. Robinson, Trans.). Harper \& Row.
+    \bibitem{heidegger1962} Heidegger, M. (1962). \textit{Being and Time}. (J. Macquarrie, E. Robinson, Trans.). Harper \& Row.
 
 \end{thebibliography}
 
