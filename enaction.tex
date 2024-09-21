@@ -13,7 +13,9 @@
 \usepackage{mathtools} % For additional mathematical tools
 
 \newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{example}{Example}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{corollary}{Corollary}[section]
@@ -36,7 +38,7 @@ This paper introduces a novel framework for understanding cognition by leveragin
 \tableofcontents
 
 % Section 1
-\section{Motivation}
+\section{Introduction}
 
 Understanding cognition remains one of the most challenging and profound quests in both science and philosophy. Traditional Western approaches often model cognition as the manipulation of internal representations of an external world, emphasizing a computational view of the mind. In contrast, enactivism, an emerging paradigm in cognitive science, posits that cognition arises through a dynamic interaction between an organism and its environment, without reliance on internal representations \cite{varela1991}.
 
@@ -44,13 +46,56 @@ In this paper, we aim to provide a rigorous mathematical framework for enactivis
 
 Our goals in this paper are threefold:
 
+\begin{enumerate} 
+\item To introduce and justify the use of category theory and topos theory in modeling cognitive processes.
+\item To provide concrete examples that illustrate how action and perception can be modeled as functors between categories.
+\item To discuss the philosophical implications of this framework, especially the connection between the empty self and \emph{śūnyatā}, and its impact on cognitive science.
+
+\end{enumerate}
+
+\subsection{Structure of the Paper}
+
+The paper is organized as follows:
+
+\begin{itemize} 
+\item In Section 2, we provide the philosophical motivation for our approach, discussing the limitations of representational models and introducing enactivism. 
+\item Section 3 introduces the necessary mathematical background in category theory and topos theory, with intuitive explanations and examples. 
+\item In Section 4, we develop our main framework, modeling enaction as an adjunction between the categories of contexts and behaviors. 
+\item Section 5 revisits the concept of the self as the initial object and explores its connection to \emph{śūnyatā}. 
+\item Section 6 discusses the implications of our framework for cognitive science and philosophy. 
+\item In Section 7, we relate our work to existing literature, highlighting similarities and differences. 
+\item Section 8 outlines future research directions, including empirical validation and further theoretical development. 
+\item We conclude in Section 9 by summarizing our findings and their significance. 
+\end{itemize}
 
 
-\subsection{Philosophical Background}
+\section{Philosophical Motivation}
 
-Wittgenstein had notable objections, especially in his \emph{Philosophical Investigations}, to the law of excluded middle (LEM). One promising feature of a topos is that the logic of its internal language is intuitionistic---it does not always include LEM. Mac Lane and Moerdijk provide a topos-theoretic expression---an \emph{internalization}---of the ZFC axioms and show their weak equivalence to ZFC in set theory. Notably, the topos they use to demonstrate this is \emph{well-pointed} and therefore Boolean (i.e., the logic of its internal language is Boolean).
+Wittgenstein had notable objections, especially in his \emph{Philosophical Investigations}, to the law of excluded middle (LEM). One promising feature of a topos is that the logic of its internal language is intuitionistic --- it does not in general include LEM. Mac Lane and Moerdijk provide a topos-theoretic expression---an \emph{internalization}---of the ZFC axioms and show their weak equivalence to ZFC in set theory. Notably, the topos they use to demonstrate this is \emph{well-pointed} and therefore Boolean (i.e., the logic of its internal language is Boolean).
 
-Topos theory offers a generalization of set theory and its foundations. Here, the fundamental relation is not the structural, hierarchical relation $\in$ of set membership but the morphism $X \to Y$ from one object $X$ to another $Y$. Topos theory also provides an abstract description and generalization of point-set topology, encapsulating the notion of local determination through (pre)sheaves and context-dependent truth. The quintessential image is that of a function $f \colon X \to \mathbb{R}$ which is continuous when restricted to some open subset $U \subset X$.
+\subsection{Limitations of Representational Models}
+
+Traditional cognitive science often relies on the assumption that cognition involves internal representations of an external world. This view, rooted in computationalism, treats the mind as a symbol-manipulating system \cite{fodor1980}. However, this model faces several challenges:
+
+\begin{itemize} 
+\item Frame Problem: Determining which aspects of a complex environment are relevant to a given context is computationally intractable \cite{pylyshyn1987}. 
+\item Embodiment: It neglects the role of the body and the environment in shaping cognitive processes \cite{clark1997}. 
+\item Dynamic Interaction: It fails to account for the continuous and reciprocal interaction between an organism and its environment \cite{thompson2007}. 
+\end{itemize}
+
+\subsection{Enactivism}
+
+Enactivism offers an alternative by proposing that cognition arises through an organism's active engagement with its environment. Key principles include:
+
+\begin{itemize} \item Autonomy: Cognitive systems are self-organizing and self-maintaining. \item Embodiment: The body shapes the mind, and cognition cannot be separated from the physical form. \item Embeddedness: Cognition is situated within and cannot be isolated from the environment. \item Dynamic Co-emergence: Organism and environment co-determine each other in a continuous feedback loop \cite{varela1991}. \end{itemize}
+
+\subsection{The Need for a Formal Framework}
+
+While enactivism provides a compelling philosophical perspective, it lacks a rigorous mathematical formalism that can model the dynamic interplay between action and perception. Category theory and topos theory offer powerful tools for abstracting and formalizing such complex interactions.
+
+\subsection{Preview}
+
+Topos theory offers a generalization of set theory and its foundations. Here, the fundamental relation is not the structural, hierarchical relation $\in$ of set membership but the arrow $X \to Y$ between objects. Topos theory also provides an abstract description and generalization of point-set topology, encapsulating the notion of local determination through (pre)sheaves and context-dependent truth. The quintessential image is that of a function $f \colon X \to \mathbb{R}$ which is continuous when restricted to some open subset $U \subset X$.
 
 In what follows, I will illustrate that  
 \[
@@ -65,17 +110,10 @@ is a representation of local truth. Let $\mathcal{C}$ denote the category of con
 \]
 that is natural in both $C$ and $B$, for any context $C$ and behavior $B$. In other words, each morphism $\mathcal{A}(C) \to B$ of behaviors is \emph{enacted} by a unique morphism $C \to \mathcal{P}(B)$ of contexts.
 
-\subsection{The Empty Self and \emph{Śūnyatā}} \label{sec:self}
-
-In Buddhist philosophy, \emph{śūnyatā} or emptiness refers to the absence of inherent existence in all phenomena, including the self. This concept resonates with the categorical notion of the self as the initial object in the category of contexts. An initial object is one that has a unique morphism to every other object in the category, implying that the self does not possess intrinsic properties but is defined solely through its relations to various contexts. Notably, the initial object in the category of sets is the empty set $\emptyset$.
-
-This aligns with the enactive view that cognition arises from the dynamic interplay between an agent and its environment, rather than from internal representations. This perspective challenges the traditional cognitivist model that posits a central, representational self mediating between perception and action.
-
-This alignment not only bridges Eastern and Western philosophical traditions but also provides a robust framework for understanding cognition as fundamentally relational and context-dependent (as well as behavior-dependent, in a symmetric sense). Future sections will delve deeper into how this conceptualization impacts our understanding of cognitive processes and the nature of the self.
 
 \section{Mathematics}
 
-At this point, I introduce the technical framework necessary to formally express the conception of enactivism presented earlier. The language of category theory, and more specifically topos theory, provides the tools to describe the co-evolution of action and perception abstractly and rigorously.
+In this section, we introduce the mathematical concepts necessary for our framework, aiming to make them accessible through intuitive explanations and examples.
 
 \subsection{Category Theory}
 
@@ -115,6 +153,16 @@ Let $\mathbf{Beh}$ denote the \textbf{category of behaviors}, where:
 \end{definition}
 
 These categories serve as the foundational structures for modeling the dynamics of cognition as an interplay between contexts and behaviors.
+
+\subsubsection{Functors}
+
+\begin{definition} A \textbf{functor} $F \colon \mathcal{C} \to \mathcal{D}$ between categories $\mathcal{C}$ and $\mathcal{D}$ assigns:
+
+\begin{itemize} \item To each object $X$ in $\mathcal{C}$, an object $F(X)$ in $\mathcal{D}$. \item To each morphism $f \colon X \to Y$ in $\mathcal{C}$, a morphism $F(f) \colon F(X) \to F(Y)$ in $\mathcal{D}$. \end{itemize}
+
+Such that:
+
+\begin{enumerate} \item $F(\text{id}_X) = \text{id}_{F(X)}$. \item $F(g \circ f) = F(g) \circ F(f)$. \end{enumerate} \end{definition}
 
 \subsection{Limits and Colimits}
 
@@ -216,10 +264,6 @@ A \textbf{sheaf} on a topological space $X$ is a presheaf that satisfies the she
 
 Sheaf theory provides a way to systematically track locally defined data attached to the open sets of a topological space, enabling the formalization of context-dependent truth.
 
-\section{Enactment as Adjunction}
-
-Having established the necessary categorical framework, I now formalize the concept of enaction within this context.
-
 \subsection{Adjunctions in Category Theory}
 
 \begin{definition}
@@ -234,111 +278,155 @@ and a natural bijection
 for all objects $C$ in $\mathcal{C}$ and $B$ in $\mathcal{D}$.
 \end{definition}
 
-In this context, $\mathcal{A}$ is the \textbf{left adjoint} and $\mathcal{P}$ is the \textbf{right adjoint}.
+In this context, $\mathcal{A}$ is the \textbf{left adjoint} and $\mathcal{P}$ is the \textbf{right adjoint} and we write $\mathcal{A} \dashv \mathcal{P}$.
 
-\subsection{Modeling Enactment as an Adjunction}
+\section{Enactment as Adjunction}
 
-In the framework of enactivism, enaction can be modeled as an adjunction between the category of contexts $\mathbf{Con}$ and the category of behaviors $\mathbf{Beh}$. Specifically:
+\subsection{Defining the Categories}
 
-\begin{itemize}
-    \item The functor $\mathcal{A} \colon \mathbf{Con} \to \mathbf{Beh}$ represents \textbf{action}.
-    \item The functor $\mathcal{P} \colon \mathbf{Beh} \to \mathbf{Con}$ represents \textbf{perception}.
-\end{itemize}
+\begin{definition} The category $\mathbf{Con}$ (Contexts):
 
-The adjunction $\mathcal{A} \dashv \mathcal{P}$ encapsulates the bidirectional relationship between action and perception, embodying the co-evolutionary dynamics central to enactivism.
-
-\subsection{Properties of the Adjunction}
-
-\begin{itemize}
-    \item \textbf{Unit and Counit}: The adjunction is characterized by natural transformations known as the unit $\eta \colon \text{Id}_{\mathbf{Con}} \to \mathcal{P} \circ \mathcal{A}$ and the counit $\epsilon \colon \mathcal{A} \circ \mathcal{P} \to \text{Id}_{\mathbf{Beh}}$.
-    \item \textbf{Adjoint Functor Theorem}: Under certain conditions, adjoint functors can be uniquely determined, ensuring the robustness of the enaction model.
-\end{itemize}
-
-\subsection{Implications for Cognition}
-
-This adjoint relationship implies that actions are not merely responses to perceptions but are intertwined in a reciprocal process. Each action alters the context, which in turn affects subsequent perceptions, leading to a continuous loop of interaction.
-
-\section{The Empty Self Revisited}
-
-Building upon the categorical framework, I revisit the concept of the self as the initial object in the category of contexts.
-
-\subsection{Initial Objects in Category Theory}
-
-\begin{definition}
-An \textbf{initial object} in a category $\mathcal{C}$ is an object $I$ such that for every object $X$ in $\mathcal{C}$, there exists a unique morphism $I \to X$.
+\begin{itemize} 
+\item \textbf{Objects}: Contexts or situations in which cognition occurs. 
+\item \textbf{Arrows}: Transitions or relationships between contexts. 
+\end{itemize} 
 \end{definition}
 
-In $\mathbf{Set}$, the initial object is the empty set $\emptyset$.
+\begin{example} A context could be a visual scene, and a morphism could represent the act of shifting attention within that scene. \end{example}
 
-\subsection{Self as an Initial Object}
+\begin{definition} The category $\mathbf{Beh}$ (Behaviors):
 
-Interpreting the self as the initial object implies that the self does not possess inherent properties but is defined entirely through its interactions with various contexts. This mirrors the Buddhist notion of \emph{śūnyatā}, where the self is seen as empty of intrinsic existence.
+\begin{itemize} 
+\item \textbf{Objects}: Behaviors or actions taken by an agent. 
+\item \textbf{Arrows}: Processes transforming one behavior into another. 
+\end{itemize} 
+\end{definition}
 
-\subsection{Consequences for Cognitive Modeling}
+\begin{example} A behavior could be reaching for an object, and a morphism could represent the modification of that action due to environmental feedback. \end{example}
 
-This perspective challenges the traditional view of the self as a central, stable entity mediating between perception and action. Instead, it posits the self as fundamentally relational and defined by its engagements with different contexts.
+\subsection{Modeling action and perception as functors}
+We model action and perception as functors between these categories:
 
-\section{Subobject Classifier and Context-Dependent Truth}
+\begin{itemize} 
+\item \textbf{Action Functor} $\mathcal{A} \colon \mathbf{Con} \to \mathbf{Beh}$: Maps contexts to behaviors. 
+\item \textbf{Perception Functor} $\mathcal{P} \colon \mathbf{Beh} \to \mathbf{Con}$: Maps behaviors to resulting contexts. 
+\end{itemize}
 
-\subsection{Subobject Classifier in $\mathbf{Con}$}
+\subsection{Establishing the Adjunction}
 
-Assuming that $\mathbf{Con}$ is a topos, it possesses a subobject classifier $\Omega$. This allows for the representation of predicates and propositions within the category, facilitating context-dependent truth values.
+The adjunction $\mathcal{A} \dashv \mathcal{P}$ captures the reciprocal relationship between action and perception.
 
-\subsection{Modeling Local Truth}
+\begin{theorem}
+For any context $C$ and behavior $B$ there is a bijection
+\[
+\phi_{C, B} \colon \text{Hom}_{\textbf{Beh}} ( \mathcal{A} (C), B) \cong Hom_{\textbf{Con}} (C, \mathcal{P}(B))
+\]
+between such behavioral and contextual transformations that is natural in both $C$ and $B$.
+\end{theorem}
+\begin{proof}
+This is straight up the definition of $\mathcal{A} \dashv \mathcal{P}$.
+\end{proof}
 
-The commutative diagram presented earlier illustrates how local truth is captured within the topos-theoretic framework. Each context $U$ and its relationship to a behavior via $\alpha$ and $\varphi(x)$ can be understood through the lens of the subobject classifier and the internal logic of the topos.
+This adjunction formalizes the idea that actions are generated from contexts and, in turn, behaviors influence subsequent contexts through perception. It embodies the enactivist view that cognition is a continuous loop of action and perception.
 
-\section{Implications for Enactivism and Cognitive Science}
+In this diagram, the dotted arrow represents the process of enaction, combining action and perception into a cohesive cognitive process.
+
+\section{The Empty Self and \emph{Śūnyatā}}
+
+\subsection{Initial Object in Category Theory}
+
+\begin{definition} An \textbf{initial object} in a category $\mathcal{C}$ is an object $0$ such that for every object $X$ in $\mathcal{C}$, there exists a unique morphism $0 \to X$. \end{definition}
+
+\begin{example} In $\mathbf{Set}$, the empty set $\emptyset$ is the initial object. \end{example}
+
+\subsection{Self as the Initial Object}
+
+We propose that the self can be modeled as the initial object in $\mathbf{Con}$.
+
+\begin{remark} The self, being the origin of all experiences, maps uniquely to every context but lacks inherent structure within this framework, aligning with the notion of an initial object. \end{remark}
+
+\subsection{Connection to \emph{Śūnyatā}}
+
+In Buddhist philosophy, \emph{śūnyatā} refers to the emptiness of inherent existence in all phenomena, including the self \cite{garfield1995}.
+
+\begin{quote} "Form is emptiness, emptiness is form." -- \textit{Heart Sutra} \end{quote}
+
+Our model reflects this by representing the self as devoid of intrinsic properties, defined only through its relations (morphisms) to contexts.
+
+\subsection{Philosophical Implications}
+
+This conceptualization challenges the traditional notion of a fixed, representational self and supports a relational understanding of identity.
+
+\section{Examples and Applications}
+
+\subsection{A Simple Cognitive Process}
+
+Consider an agent navigating a maze.
+
+\begin{itemize} \item \textbf{Contexts}: The agent's current location and perception of the maze. \item \textbf{Behaviors}: Movements such as turning left or right. \item \textbf{Action Functor $\mathcal{A}$}: Given a context (current location), the functor maps to a behavior (choose direction). \item \textbf{Perception Functor $\mathcal{P}$}: Given a behavior (movement), the functor maps to a new context (new location). \end{itemize}
+
+The adjunction captures how the agent's decision to move influences its perception and how that perception informs future actions.
+
+\subsection{Language Acquisition}
+
+In language learning:
+
+\begin{itemize} \item \textbf{Contexts}: Linguistic environments, such as exposure to certain vocabulary or grammar structures. \item \textbf{Behaviors}: Speech acts or language production attempts. \item \textbf{Adjunction}: The interplay between hearing language (perception) and speaking (action), leading to language acquisition. \end{itemize}
+
+\subsection{Implications for Artificial Intelligence}
+
+Modeling cognition in this way can inform the development of AI systems that learn and adapt through interaction, rather than relying solely on pre-programmed representations.
+
+\section{Implications for Cognitive Science and Philosophy}
 
 \subsection{Relational Cognition}
 
-By modeling cognition as an adjunction between contexts and behaviors, this framework emphasizes the relational and dynamic nature of cognitive processes. Cognition is not a process of internal computation but a continuous interaction with the environment.
+Our framework emphasizes that cognition is not a computation over representations but a relational process emerging from interactions.
 
-\subsection{Context-Dependence}
+\subsection{Context-Dependence and Situatedness}
 
-The use of topos theory highlights the importance of context in determining truth and meaning. Cognitive processes are inherently context-dependent, aligning with enactivist views that cognition cannot be fully understood without considering the situatedness of the agent.
+By modeling contexts explicitly, we highlight the importance of situatedness in cognitive processes, aligning with embodied cognition theories \cite{clark1997}.
 
-\subsection{Bridging Eastern and Western Philosophies}
+\subsection{Bridging Eastern and Western Thought}
 
-The correspondence between the categorical concept of the empty self and the Buddhist notion of \emph{śūnyatā} offers a unique bridge between Eastern and Western philosophical traditions, enriching the theoretical foundations of cognitive science.
+The correspondence between the empty self and \emph{śūnyatā} offers a philosophical bridge that enriches both traditions.
 
 \section{Related Work}
 
 \subsection{Enactivism in Cognitive Science}
 
-Enactivism has been a growing perspective in cognitive science, emphasizing the role of embodied action in cognition. Key contributors include Varela, Thompson, and Rosch, who argue against the traditional computational view of the mind.
+Our work builds upon the foundational ideas of enactivism \cite{varela1991}, extending them with mathematical rigor.
 
-\subsection{Category Theory in Cognitive Science}
+\subsection{Category Theory in Cognitive Models}
 
-While category theory has found applications in various fields, its use in cognitive science is relatively novel. Previous work has explored categorical models for neural networks, conceptual spaces, and cognitive architectures, laying the groundwork for the present approach.
+Previous attempts to apply category theory to cognition include conceptual spaces \cite{gardenfors2004} and neural network architectures \cite{spivak2014}.
 
-\subsection{Topos Theory and Logic}
+\subsection{Philosophical Perspectives on the Self}
 
-Topos theory has been instrumental in providing a unifying framework for different areas of mathematics and logic. Its application to cognitive science represents an innovative extension of its utility, offering new perspectives on the foundations of cognition.
+The concept of the self as relational is explored in both Western \cite{heidegger1962} and Eastern philosophies \cite{garfield1995}.
 
 \section{Future Work}
 
-\subsection{Formalizing the Categories of Contexts and Behaviors}
+\subsection{Formalizing the Categories}
 
-Further development is needed to precisely define the categories $\mathbf{Con}$ and $\mathbf{Beh}$, including their objects, morphisms, and structural properties. This formalization will facilitate the application of the adjoint model to specific cognitive phenomena.
+Further research will focus on precisely defining the objects and morphisms in $\mathbf{Con}$ and $\mathbf{Beh}$, potentially using empirical data.
 
 \subsection{Empirical Validation}
 
-Connecting the abstract categorical model to empirical data in cognitive science is a crucial next step. This could involve mapping specific cognitive processes to morphisms in the categories or using the framework to generate testable predictions.
+We aim to test our model by applying it to specific cognitive tasks and comparing predictions with experimental results.
 
-\subsection{Expanding the Logical Framework}
+\subsection{Extensions to Other Cognitive Domains}
 
-Exploring the internal logic of the topos and its implications for cognitive processes can provide deeper insights. This includes investigating how intuitionistic logic influences the interpretation of cognitive interactions.
+Exploring how this framework applies to social cognition, emotions, and consciousness.
 
 \section{Conclusion}
 
-This paper presents a novel approach to modeling cognition through the lens of category and topos theory, framing enactivism as an adjunction between contexts and behaviors. By positioning the self as an initial object, aligning with the concept of \emph{śūnyatā}, this framework challenges traditional cognitivist models and offers a relational, context-dependent understanding of cognitive processes. Future work will focus on formalizing the categorical structures and bridging the gap between abstract theory and empirical cognitive science.
+We have presented a novel framework that models cognition as an adjunction between contexts and behaviors, capturing the dynamic interplay central to enactivism. By conceptualizing the self as the initial object, we align with the philosophical concept of \emph{śūnyatā}, offering a relational understanding of identity. This interdisciplinary approach provides new insights into cognitive science and opens avenues for future research.
 
 \section*{Acknowledgments}
 
 % Optional: Acknowledge individuals or institutions that contributed to the work.
-
-\section*{References}
+The author thanks ChatGPT, especially the models 4o and o1-preview.
 
 % Example references. Replace with your actual references.
 \begin{thebibliography}{9}
@@ -349,14 +437,19 @@ Varela, F. J., Thompson, E., \& Rosch, E. (1991). \textit{The Embodied Mind: Cog
 \bibitem{garfield1995} 
 Garfield, J. L. (1995). \textit{The Fundamental Wisdom of the Middle Way: Nāgārjuna's Mūlamadhyamakakārikā}. Oxford University Press.
 
-\bibitem{maclane1998}
-Mac Lane, S., \& Moerdijk, I. (1998). \textit{Sheaves in Geometry and Logic: A First Introduction to Topos Theory}. Springer.
+\bibitem{clark1997} Clark, A. (1997). \textit{Being There: Putting Brain, Body, and World Together Again}. MIT Press.
 
-\bibitem{wittgenstein1953}
-Wittgenstein, L. (1953). \textit{Philosophical Investigations}. Blackwell Publishing.
+\bibitem{fodor1980} Fodor, J. A. (1980). \textit{Methodological Solipsism Considered as a Research Strategy in Cognitive Psychology}. Behavioral and Brain Sciences, 3(1), 63-73.
 
-\bibitem{holland1995}
-Holland, P. (1995). \textit{Hidden Order: How Adaptation Builds Complexity}. Addison-Wesley.
+\bibitem{thompson2007} Thompson, E. (2007). \textit{Mind in Life: Biology, Phenomenology, and the Sciences of Mind}. Harvard University Press.
+
+\bibitem{pylyshyn1987} Pylyshyn, Z. W. (1987). \textit{The Robot's Dilemma: The Frame Problem in Artificial Intelligence}. Ablex Publishing.
+
+\bibitem{thompson2007} Thompson, E. (2007). \textit{Mind in Life: Biology, Phenomenology, and the Sciences of Mind}. Harvard University Press.
+
+\bibitem{wittgenstein1953} Wittgenstein, L. (1953). \textit{Philosophical Investigations}. Blackwell Publishing.
+
+\bibitem{heidegger1962} Heidegger, M. (1962). \textit{Being and Time}. (J. Macquarrie, E. Robinson, Trans.). Harper \& Row.
 
 \end{thebibliography}
 
