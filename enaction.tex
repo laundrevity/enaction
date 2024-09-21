@@ -1,0 +1,95 @@
+\documentclass{article}
+
+% Required packages
+\usepackage{amsmath}   % For mathematical symbols
+\usepackage{amssymb}   % For additional symbols
+\usepackage{amsthm}    % For theorem-like environments
+\usepackage{tikz-cd}   % For commutative diagrams
+
+\newtheorem{definition}{Definition}[section]
+
+
+\title{Enacted cognition as adjunction: a topos-theoretic approach to enactivism}
+\author{Conor L. Mahany}
+\date{\today}
+
+\begin{document}
+
+% Title
+\maketitle
+
+% Abstract
+\begin{abstract}
+In this paper I radically depart from traditionally Western, cognitivist descriptions of cognition as fundamentally involving the representation of some external world by the agent. Instead of focusing solely on how action is determined from perception or vice versa, I use the language of category theory to provide an abstract description of the \emph{co-evolution} of action and perception, e.g., as an \emph{adjunction}. I show that the self is \emph{empty} in the sense that the self is the initial object in the category of contexts. This corresponds directly to \emph{śūnyatā} in Buddhism, and hence this work can be seen as an implementation of cognition as enaction (or \emph{enactivism}).
+\end{abstract}
+
+% Table of contents
+\tableofcontents
+
+% Section 1
+\section{Motivation}
+
+Here I have the nigh impossible task of motivating a completely foreign and aggressively abstract nonsense\footnote{Saunders Mac Lane. ``The PNAS way back then''. Proc. Natl. Acad. Sci. USA Vol. 94, pp. 5983–5985, June 1997. ``The first of these papers is a more striking case; it introduced the very abstract idea of a ``category''—a subject then called ``general abstract nonsense''!''} for a purpose that can as yet be only very dimly perceived. It is impossible for me to provide a convincing explanation on the ``first pass'', as it were. Equivalently, it is impossible for you to obtain a working understanding after your first read (assuming you are brave enough to endure this in its entirety). My hope is that, in your reading this and in my writing this, we both come closer to an understanding.
+
+To begin, let's consider some reasons why topos theory might be a viable candidate for modelling embodied cognition. 
+
+\subsection{Philosophical background}
+Wittgenstein had some notable beef, especially in the \emph{Philosophical Investigations}, with the law of excluded middle (LEM). One very promising feature of a topos is that the logic of its internal language is intuitionistic --- that is, it does not always include LEM. Mac Lane and Moerdijk advance this endeavour to its culmination, showing how it can serve as a topos-theoretic foundation of mathematics. They give a topos-theoretic expression --- that is, an internalization --- of the ZFC axioms and show their weak equivalence to ZFC in set theory. It is worth emphasizing that the topos they use to demonstrate this is ``well-pointed'' and therefore Boolean (e.g., the logic of its internal language is Boolean).
+
+So, topos theory can provide us with a sort of ``generalization'' of set theory. In which, as I will emphasize throughout, the fundamental relation is not the structural, hierarchical relation of set membership $\in$, but, instead, the arrow $X \to Y$ from one object $X$ to another $Y.$ Topos theory also provides an abstract description and generalization of point-set topology, that is, a notion of how something can be determined locally, through the concept of a (pre)sheaf (e.g., uniquely collatable, e.g. existence of an equalizer), or, equivalently, a notion of \emph{context-dependent truth}.
+
+As a teaser, in what follows I will show that  
+\[
+\begin{tikzcd}
+& \{ x \hspace{4px} | \hspace{4px} \varphi(x) \}  \arrow[r] \arrow[d, tail] & 1 \arrow[d, tail, "\text{true}"] \\
+U \arrow[r, "\alpha"] \arrow[ru, dashed, "m"] & X \arrow[r, "\varphi(x)"] & \Omega
+\end{tikzcd}
+\]
+is a picture of local truth, and enaction is an adjunction $\mathcal{A} \dashv \mathcal{P}$, where action is a functor $\mathcal{A} \colon \mathcal{C} \to \mathcal{B}$ and perception is a functor $\mathcal{P} \colon \mathcal{B} \to \mathcal{C}$. That is, enaction consists of a bijection 
+\[
+\phi_{CB} \colon \text{Hom} ( \mathcal{A}(C), B ) \to \text{Hom}(C, \mathcal{P}(B))
+\]
+that is natural in both $C$ and $B$, for any context $C$ and behavior $B$.
+
+\subsection{The Empty Self and \emph{Śūnyatā}} \label{sec:self}
+
+In Buddhist philosophy, \emph{śūnyatā} or emptiness refers to the absence of inherent existence in all phenomena, including the self. This concept resonates with the categorical notion of the self as the initial object in the category of contexts. An initial object is one that has a unique morphism to every other object in the category, implying that the self does not possess intrinsic properties but is defined solely through its relations to various contexts.
+
+By modeling the self as empty, we align with the enactive view that cognition arises from the dynamic interplay between an agent and its environment, rather than from internal representations. This perspective challenges the traditional cognitivist model that posits a central, representational self mediating between perception and action.
+
+This alignment not only bridges Eastern and Western philosophical traditions but also provides a robust framework for understanding cognition as fundamentally relational and context-dependent (as well as behavior-dependent, in a symmetric sense). Future sections will delve deeper into how this conceptualization impacts our understanding of cognitive processes and the nature of the self.
+
+\section{Math}
+
+\subsection{Category theory}
+
+\begin{definition} A \textbf{category} $\mathcal{C}$ consists of a collection of objects $X, Y, ...$ and of a collection of arrows $f \colon X \to Y$ that is closed under associative composition and has an identity arrow $1_X \colon X \to X$ for every object $X$ of $\mathcal{C}$.
+\end{definition}
+
+A prototypical example of a category is $\mathbf{Set}$, the category with sets as objects and functions as arrows.
+
+also mention category $\mathbf{Con}$ of contexts, where each object is a moment of conscious experience, and arrows represent causal structure
+
+and category $\mathbf{Beh}$ of behaviors, where each object is a behavior in lived experience and arrows also represent causal structure
+
+todo: define finite limits. discuss pullback as fibered product in Set, initial objects, terminal objects 
+todo: define monomorphisms, epimorphisms, equalizers and coequalizers 
+todo: define subobject of $X$ as equivalence class of monomorphisms into $X$ 
+todo: define subobject classifier, show that 1 + 1 is the subobject classifier for Set 
+\begin{definition}
+
+\end{definition}
+
+\subsection{Topos theory}
+\begin{definition}A \textbf{topos} $\mathcal{E}$ is a category with all finite limits, equipped with an object $\Omega$, with a function $P$ which assigns to each object $Y$ of $\mathcal{E}$ an object $PY$ of $\mathcal{E}$, and, for each object $X$ of $\mathcal{E}$, with two isomorphisms, each natural in $Y$
+\begin{equation}
+\text{Sub}_{\mathcal{E}} (X) \cong \text{Hom}_{\mathcal{E}} (X, \Omega),
+\end{equation}
+\begin{equation}
+\text{Hom}_{\mathcal{E}} (Y \times X, \Omega) \cong \text{Hom}_{\mathcal{E}} (X, PY).
+\end{equation}
+
+
+\end{definition}
+
+\end{document}
