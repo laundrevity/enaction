@@ -13,6 +13,7 @@
 \usepackage{graphicx}  % For including images
 \usepackage{mathtools} % For additional mathematical tools
 \usepackage{hyperref}  % For links
+\usepackage{mdframed}
 
 \newtheorem{definition}{Definition}[section]
 \newtheorem{remark}{Remark}[section]
@@ -21,6 +22,18 @@
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{corollary}{Corollary}[section]
+
+% Define a custom quote environment with a vertical bar on the left
+\newmdenv[
+    leftline=true, 
+    topline=false, 
+    bottomline=false, 
+    rightline=false, 
+    linecolor=gray, 
+    linewidth=3pt,
+    skipabove=\topsep,
+    skipbelow=\topsep
+]{customquote}
 
 \title{Adjunctive cognition: A topos-theoretic approach to enactivism}
 \author{Conor L. Mahany\footnote{
@@ -39,51 +52,53 @@
 \end{abstract}
 
 \newpage
-\begin{center}
-    If I were to say that the so-called philosophy of this fellow Hegel is a colossal piece of mystification which will yet provide posterity with an inexhaustible theme for laughter at our times, that it is a pseudo-philosophy paralyzing all mental powers, stifling all real thinking, and, by the most outrageous misuse of language, putting in its place the \emph{hollowest}\footnote{Emphasis \emph{emphatically} added.}, most senseless, thoughtless, and, as is confirmed by its success, most stupefying verbiage, \textbf{I should be quite right}.\\
-    \vspace{0.25cm}
-    Further, if I were to say that this \emph{summus philosophus} … scribbled nonsense quite unlike any mortal before him, so that whoever could read his most eulogized work, the so-called \emph{Phenomenology of Spirit}, without feeling as if he were in a madhouse, would qualify as an inmate for Bedlam, \textbf{I should be no less right}.
+% Quotes section
 
-    \vspace{0.25cm}
-    — Arthur Schopenhauer, \emph{On the Basis of Morality} (1839)
-\end{center}
+\begin{customquote}
+    If I were to say that the so-called philosophy of this fellow Hegel is a colossal piece of mystification which will yet provide posterity with an inexhaustible theme for laughter at our times, that it is a pseudo-philosophy paralyzing all mental powers, stifling all real thinking, and, by the most outrageous misuse of language, putting in its place the \emph{hollowest}\footnote{Emphasis \emph{emphatically} added.}, most senseless, thoughtless, and, as is confirmed by its success, most stupefying verbiage, I should be quite right.” \\
+    \begin{center}
+        Arthur Schopenhauer, \emph{On the Basis of Morality} (1839)
+    \end{center}
+\end{customquote}
 
-\vspace{20px} % Add some vertical space between quotes
+\vspace{10px} % Add some vertical space between quotes
 
-\begin{center}
+\begin{customquote}
     The slogan is ``\textbf{Adjoint functors arise everywhere}''. \\
+    \begin{center}
+        Saunders Mac Lane, \emph{Categories for the Working Mathematician} (1971)
+    \end{center}
+\end{customquote}
 
-    \vspace{0.25cm}
-    — Saunders Mac Lane, \emph{Categories for the Working Mathematician} (1971)
-\end{center}
+\vspace{10px}
 
-\vspace{20px}
+\begin{customquote}
+    ... the experience of persons interacting is always an inter-experience, and so, we must consider your experience of the relationship. Your frown may, indeed, indicate hostility, but your hostility may be a function of your perceiving me as having betrayed your confidence, which, however, I may not experience myself as having done. Further, I may not realise that you see me as having done that, while you may or may not know that I do not see you as seeing me in this way. \textbf{Unless our experience of each other is clarified a spiral of reciprocal fear, mistrust and misunderstanding will build up.} \\
+    \begin{center}
+        Aaron Esterson, \emph{The Affirmation of Experience: A contribution towards a science of social situations} (1985) \cite{esterson1985}
+    \end{center}
+\end{customquote}
 
-\begin{center}
-    ... the experience of persons interacting is always an inter-experience, and so, we must consider your experience of the relationship. Your frown may, indeed, indicate hostility, but your hostility may be a function of your perceiving me as having betrayed your confidence, which, however, I may not experience myself as having done. Further, I may not realise that you see me as having done that, while you may or may not know that I do not see you as seeing me in this way. \textbf{Unless our experience of each other is clarified a spiral of reciprocal fear, mistrust and misunderstanding will build up.}
-
-    \vspace{0.25cm}
-    — Aaron Esterson, \emph{The Affirmation of Experience: A contribution towards a science of social situations} (1985) \cite{esterson1985}
-\end{center}
-
-\vspace{20px}
+\vspace{10px}
 
 
-\begin{center}
+\begin{customquote}
     But just as the Madhyamaka dialectic, a provisional and conventional activity of the relative world, points beyond itself, so we might hope that \textbf{our concept of enaction could}, at least for some cognitive scientists and perhaps even for the more general milieu of scientific thought, \textbf{point beyond itself to a truer understanding of groundlessness}.
 
-    \vspace{0.5cm}
-    — Varela, Thompson, \& Rosch, \emph{The Embodied Mind} (1991) \cite{varela1991}
-\end{center}
+    \begin{center}
+        Varela, Thompson, \& Rosch, \emph{The Embodied Mind} (1991) \cite{varela1991}
+    \end{center}
+\end{customquote}
 
-\vspace{20px} % Add some vertical space between quotes
+\vspace{10px} % Add some vertical space between quotes
 
-\begin{center}
+\begin{customquote}
     \textbf{Form is emptiness, emptiness is form.}\\
 
-    \vspace{0.5cm}
-    — \emph{Heart Sūtra} of the Mahayana Buddhist traditions
-\end{center}
+    \begin{center}
+        \emph{Heart Sūtra} of the Mahayana Buddhist traditions
+    \end{center}
+\end{customquote}
 
 \newpage
 
@@ -100,7 +115,7 @@ Understanding cognition remains one of the most challenging and profound quests 
 
 In this work, I aim to provide a rigorous mathematical framework for enactivism by employing tools from category theory and topos theory. These mathematical structures make possible the expression of \textbf{cognition} --- the co-evolution of action and perception --- as an \textbf{adjunction}. This is the sense in which the essence of enaction is embodied. Furthermore, by conceptualizing the self as the initial object in the category of contexts, we find a natural correspondence with the Buddhist concept of \emph{śūnyatā} or emptiness \cite{garfield1995}.
 
-Our goals in this work are threefold:
+My goals in this work are threefold:
 
 \begin{enumerate}
     \item To introduce and justify the use of category theory and topos theory in modeling cognitive processes.
@@ -114,29 +129,22 @@ Our goals in this work are threefold:
 The paper is organized as follows:
 
 \begin{itemize}
-    \item In Section 2, we provide the philosophical motivation for our approach, discussing the limitations of representational models and introducing enactivism.
+    \item In Section 2, I provide the philosophical motivation for our approach, discussing the limitations of representational models and introducing enactivism.
     \item Section 3 introduces the necessary mathematical background in category theory and topos theory, with intuitive explanations and examples.
-    \item In Section 4, we develop our main framework, expressing cognition as an adjunction between action and perception.
+    \item In Section 4, I develop the main framework, expressing cognition as an adjunction between action and perception.
     \item Section 5 revisits the concept of the self as the initial object and explores its connection to \emph{śūnyatā}.
     \item Section 6 discusses the implications of our framework for cognitive science and philosophy.
-    \item In Section 7, we relate our work to existing literature, highlighting similarities and differences.
+    \item In Section 7, the work is related to existing literature, highlighting similarities and differences.
     \item Section 8 outlines future research directions, including empirical validation and further theoretical development.
-    \item We conclude in Section 9 by summarizing our findings and their significance.
+    \item I conclude in Section 9 by summarizing my findings and their significance.
 \end{itemize}
 
 
 \section{Philosophical Motivation}
-
 philosophy of mind/logic/math historically: ... Frege, Russell, Wittgenstein, Kripke, Cohen, Chalmers
 
-seemingly inescapable rock and hard place: subjectivism (Tractatus) and nihilism (Philosophical Investigations).
-
-empty self as interpreted as object corresponding to self is initial in category of contexts (like empty set is initial in category of sets) and hence topos theory
-
-law of the instrument => secret to wigner's puzzle: self and world (0 and 1) have reciprocal structure due to adjunction
 
 \subsection{Limitations of Representational Models}
-
 Traditional cognitive science often relies on the assumption that cognition involves internal representations of an external world. This view, rooted in computationalism, treats the mind as a symbol-manipulating system \cite{fodor1980}. However, this model faces several challenges:
 
 \begin{itemize}
@@ -151,9 +159,19 @@ Enactivism offers an alternative by proposing that cognition arises through an o
 
 \begin{itemize} \item Autonomy: Cognitive systems are self-organizing and self-maintaining. \item Embodiment: The body shapes the mind, and cognition cannot be separated from the physical form. \item Embeddedness: Cognition is situated within and cannot be isolated from the environment. \item Dynamic Co-emergence: Organism and environment co-determine each other in a continuous feedback loop \cite{varela1991}. \end{itemize}
 
-\subsection{The Need for a Formal Framework}
 
-While enactivism provides a compelling philosophical perspective, it lacks a rigorous mathematical formalism that can model the dynamic interplay between action and perception. Category theory and topos theory offer powerful tools for abstracting and formalizing such complex interactions. (How can we be certain that this impulse for a formal framework is not a form of grasping?)
+\subsection{Rock and hard place between Tractatus and Phil Inv}
+seemingly inescapable rock and hard place: subjectivism (Tractatus) and nihilism (Philosophical Investigations).
+
+
+\subsection{Empty self and initial object}
+empty self as interpreted as object corresponding to self is initial in category of contexts (like empty set is initial in category of sets) and hence topos theory
+
+
+\subsection{Maslow's hammer and Wigner's puzzle}
+law of the instrument => secret to wigner's puzzle: self and world (0 and 1) have reciprocal structure due to adjunction
+
+
 
 \subsection{Preview}
 
