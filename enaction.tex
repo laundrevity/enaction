@@ -34,32 +34,33 @@ Here I have the nigh impossible task of motivating a completely foreign and aggr
 To begin, let's consider some reasons why topos theory might be a viable candidate for modelling embodied cognition. 
 
 \subsection{Philosophical background}
-Wittgenstein had some notable beef, especially in the \emph{Philosophical Investigations}, with the law of excluded middle (LEM). One very promising feature of a topos is that the logic of its internal language is intuitionistic --- that is, it does not always include LEM. Mac Lane and Moerdijk advance this endeavour to its culmination, showing how it can serve as a topos-theoretic foundation of mathematics. They give a topos-theoretic expression --- that is, an internalization --- of the ZFC axioms and show their weak equivalence to ZFC in set theory. It is worth emphasizing that the topos they use to demonstrate this is ``well-pointed'' and therefore Boolean (e.g., the logic of its internal language is Boolean).
+Wittgenstein had some notable beef, especially in the \emph{Philosophical Investigations}, with the law of excluded middle (LEM). One very promising feature of a topos is that the logic of its internal language is intuitionistic --- that is, it does not always include LEM. Mac Lane and Moerdijk give a topos-theoretic expression --- that is, an \emph{internalization} --- of the ZFC axioms and show their weak equivalence to ZFC in set theory. It is worth emphasizing that the topos they use to demonstrate this is ``well-pointed'' and therefore Boolean (e.g., the logic of its internal language is Boolean).
 
-So, topos theory can provide us with a sort of ``generalization'' of set theory. In which, as I will emphasize throughout, the fundamental relation is not the structural, hierarchical relation of set membership $\in$, but, instead, the arrow $X \to Y$ from one object $X$ to another $Y.$ Topos theory also provides an abstract description and generalization of point-set topology, that is, a notion of how something can be determined locally, through the concept of a (pre)sheaf (e.g., uniquely collatable, e.g. existence of an equalizer), or, equivalently, a notion of \emph{context-dependent truth}.
+So, topos theory can provide us with a sort of ``generalization'' of set theory, and of its foundations. In which, as I will emphasize throughout, the fundamental relation is not the structural, hierarchical relation $\in$ of set membership, but, instead, the arrow $X \to Y$ from one object $X$ to another $Y.$ Topos theory also provides an abstract description and generalization of point-set topology, that is, a notion of how something can be determined locally, through the concept of a (pre)sheaf (e.g., uniquely collatable, e.g. existence of an equalizer), or, equivalently, a notion of \emph{context-dependent truth}.
 
-As a teaser, in what follows I will show that  
+In what follows I will show that  
 \[
 \begin{tikzcd}
 & \{ x \hspace{4px} | \hspace{4px} \varphi(x) \}  \arrow[r] \arrow[d, tail] & 1 \arrow[d, tail, "\text{true}"] \\
 U \arrow[r, "\alpha"] \arrow[ru, dashed, "m"] & X \arrow[r, "\varphi(x)"] & \Omega
 \end{tikzcd}
 \]
-is a picture of local truth, and enaction is an adjunction $\mathcal{A} \dashv \mathcal{P}$, where action is a functor $\mathcal{A} \colon \mathcal{C} \to \mathcal{B}$ and perception is a functor $\mathcal{P} \colon \mathcal{B} \to \mathcal{C}$. That is, enaction consists of a bijection 
+is a picture of local truth. Let $\mathcal{C}$ denote the category of contexts and let $\mathcal{B}$ denote the category of behaviors. Then enaction is an adjunction $\mathcal{A} \dashv \mathcal{P}$, where action is a functor $\mathcal{A} \colon \mathcal{C} \to \mathcal{B}$ and perception is a functor $\mathcal{P} \colon \mathcal{B} \to \mathcal{C}$. That is, enaction consists of a bijection 
 \[
 \phi_{CB} \colon \text{Hom} ( \mathcal{A}(C), B ) \to \text{Hom}(C, \mathcal{P}(B))
 \]
 that is natural in both $C$ and $B$, for any context $C$ and behavior $B$.
 
-\subsection{The Empty Self and \emph{Śūnyatā}} \label{sec:self}
+\subsection{The empty self and \emph{śūnyatā}} \label{sec:self}
 
-In Buddhist philosophy, \emph{śūnyatā} or emptiness refers to the absence of inherent existence in all phenomena, including the self. This concept resonates with the categorical notion of the self as the initial object in the category of contexts. An initial object is one that has a unique morphism to every other object in the category, implying that the self does not possess intrinsic properties but is defined solely through its relations to various contexts.
+In Buddhist philosophy, \emph{śūnyatā} or emptiness refers to the absence of inherent existence in all phenomena, including the self. This concept resonates with the categorical notion of the self as the initial object in the category of contexts. An initial object is one that has a unique morphism to every other object in the category, implying that the self does not possess intrinsic properties but is defined solely through its relations to various contexts. Interestingly, the initial object in the category of sets is the empty set $\emptyset$.
 
-By modeling the self as empty, we align with the enactive view that cognition arises from the dynamic interplay between an agent and its environment, rather than from internal representations. This perspective challenges the traditional cognitivist model that posits a central, representational self mediating between perception and action.
+This aligns with the enactive view that cognition arises from the dynamic interplay between an agent and its environment, rather than from internal representations. This perspective challenges the traditional cognitivist model that posits a central, representational self mediating between perception and action.
 
 This alignment not only bridges Eastern and Western philosophical traditions but also provides a robust framework for understanding cognition as fundamentally relational and context-dependent (as well as behavior-dependent, in a symmetric sense). Future sections will delve deeper into how this conceptualization impacts our understanding of cognitive processes and the nature of the self.
 
-\section{Math}
+\section{Mathematics}
+I can no longer defer the technical specification of the language that I will be using to formally express my conception of enactivism. It is the language of mathematics in general and topos theory in particular.
 
 \subsection{Category theory}
 
