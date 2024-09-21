@@ -22,10 +22,10 @@
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{corollary}{Corollary}[section]
 
-\title{Adjunctive cognition: A topos-theoretic approach to enactivism\footnote{
+\title{Adjunctive cognition: A topos-theoretic approach to enactivism}
+\author{Conor L. Mahany\footnote{
     Email: conor.mahany@proton.me. The author is a hobbyist researcher in the field of cognitive science with a focus on enactivism and formal methods. Barring some unforeseen circumstances, the most recent version of this work can be found here \href{https://github.com/laundrevity/enaction/blob/master/enaction.pdf}{https://github.com/laundrevity/enaction/blob/master/enaction.pdf}.
 }}
-\author{Conor L. Mahany}
 \date{\today}
 
 \begin{document}
@@ -98,7 +98,7 @@
 
 Understanding cognition remains one of the most challenging and profound quests in both science and philosophy. Traditional Western approaches often model cognition as the manipulation of internal representations of an external world, emphasizing a computational view of the mind. In contrast, enactivism, an emerging paradigm in cognitive science, posits that cognition arises through a dynamic interaction between an organism and its environment, without reliance on internal representations \cite{varela1991}.
 
-In this work, I aim to provide a rigorous mathematical framework for enactivism by employing tools from category theory and topos theory. These mathematical structures make possible the expression of \textbf{cognition} --- the co-evolution of action and perception --- as an \textbf{adjunction}. This is the sense in which the essence of enaction can be formally embodied. Furthermore, by conceptualizing the self as the initial object in the category of contexts, we find a natural correspondence with the Buddhist concept of \emph{śūnyatā} or emptiness \cite{garfield1995}.
+In this work, I aim to provide a rigorous mathematical framework for enactivism by employing tools from category theory and topos theory. These mathematical structures make possible the expression of \textbf{cognition} --- the co-evolution of action and perception --- as an \textbf{adjunction}. This is the sense in which the essence of enaction is embodied. Furthermore, by conceptualizing the self as the initial object in the category of contexts, we find a natural correspondence with the Buddhist concept of \emph{śūnyatā} or emptiness \cite{garfield1995}.
 
 Our goals in this work are threefold:
 
@@ -116,7 +116,7 @@ The paper is organized as follows:
 \begin{itemize}
     \item In Section 2, we provide the philosophical motivation for our approach, discussing the limitations of representational models and introducing enactivism.
     \item Section 3 introduces the necessary mathematical background in category theory and topos theory, with intuitive explanations and examples.
-    \item In Section 4, we develop our main framework, modeling enaction as an adjunction between the categories of contexts and behaviors.
+    \item In Section 4, we develop our main framework, expressing cognition as an adjunction between action and perception.
     \item Section 5 revisits the concept of the self as the initial object and explores its connection to \emph{śūnyatā}.
     \item Section 6 discusses the implications of our framework for cognitive science and philosophy.
     \item In Section 7, we relate our work to existing literature, highlighting similarities and differences.
@@ -125,13 +125,13 @@ The paper is organized as follows:
 \end{itemize}
 
 
-
-
 \section{Philosophical Motivation}
 
-Wittgenstein had notable objections (\textbf{which?}), especially in his \emph{Philosophical Investigations}, to the law of excluded middle (LEM). One promising feature of a topos is that the logic of its internal language is intuitionistic --- it does not in general include LEM. Mac Lane and Moerdijk provide a topos-theoretic expression---an \emph{internalization}---of the ZFC axioms and show their weak equivalence to ZFC in set theory. Notably, the topos they use to demonstrate this is \emph{well-pointed} and therefore Boolean (i.e., the logic of its internal language is Boolean).
+philosophy of mind/logic/math historically: ... Frege, Russell, Wittgenstein, Kripke, Cohen, Chalmers
 
-(Why are we mentioning this here? This is probably not the place to brag about generalizing set theory when we haven't motivated anything.)
+seemingly inescapable rock and hard place: subjectivism (Tractatus) and nihilism (Philosophical Investigations).
+
+empty self as interpreted as object corresponding to self is initial in category of contexts (like empty set is initial in category of sets) and hence topos theory
 
 \subsection{Limitations of Representational Models}
 
@@ -155,23 +155,31 @@ While enactivism provides a compelling philosophical perspective, it lacks a rig
 
 \subsection{Preview}
 
-Topos theory offers a generalization of set theory and its foundations. Here, the fundamental relation is not the structural, hierarchical relation $\in$ of set membership but the arrow $X \to Y$ between objects. Topos theory also provides an abstract description and generalization of point-set topology, encapsulating the notion of local determination through (pre)sheaves and context-dependent truth. The quintessential image is that of a function $f \colon X \to \mathbb{R}$ which is continuous when restricted to some open subset $U \subset X$.
+Topos theory offers a generalization of set theory and its foundations. The fundamental relation becomes not the structural, hierarchical relation $\in$ of set membership but the arrow $\to$ between objects. This is the heart of how to go from a fixed, representational self in to a relational understanding of identity.
 
-In what follows, I will illustrate that
+Let \textbf{Con} denote the category of contexts and let \textbf{Beh} denote the category of behaviors. Then cognition can be expressed as an adjunction $\mathcal{A} \dashv \mathcal{P}$, where
+
+\begin{itemize}
+    \item action is expressed as a functor $\mathcal{A} \colon \textbf{Con} \to \textbf{Beh}$
+    \item perception is expressed as a function $\mathcal{P} \colon \textbf{Beh} \to \textbf{Con}$.
+\end{itemize}
+
+That is, cognition $\Psi$ consists of a bijection
+\[
+    \Psi_{CB} \colon \text{Hom} ( \mathcal{A}(C), B ) \cong \text{Hom}(C, \mathcal{P}(B))
+\]
+that is natural in both $C$ and $B$, for any context $C$ and behavior $B$.
+
+For each transformation of action such that one responds to $C$ not with $\mathcal{A}(C)$ but with $B$, there is a unique transformation of perception such that one perceives $B$ not as $\mathcal{P}(B)$ but as $C$. More plainly, ``be the change you want to see in the world''.
+
+In what follows, I will demonstrate that the diagram
 \[
     \begin{tikzcd}
         & \{ x \mid \varphi(x) \}  \arrow[r] \arrow[d, tail] & 1 \arrow[d, tail, "\text{true}"] \\
         U \arrow[r, "\alpha"] \arrow[ru, dashed, "m"] & X \arrow[r, "\varphi(x)"] & \Omega
     \end{tikzcd}
 \]
-is a very general expression of local truth. Let $\mathcal{C}$ denote the category of contexts and let $\mathcal{B}$ denote the category of behaviors. Then, enaction is modeled as an adjunction $\mathcal{A} \dashv \mathcal{P}$, where action is a functor $\mathcal{A} \colon \mathcal{C} \to \mathcal{B}$ and perception is a functor $\mathcal{P} \colon \mathcal{B} \to \mathcal{C}$. That is, enaction consists of a bijection
-\[
-    \phi_{CB} \colon \text{Hom} ( \mathcal{A}(C), B ) \cong \text{Hom}(C, \mathcal{P}(B))
-\]
-that is natural in both $C$ and $B$, for any context $C$ and behavior $B$.
-
-For each transformation of action such that one responds to $C$ not with $\mathcal{A}(C)$ but with $B$, there is a unique transformation of perception such that one perceives $B$ not as $\mathcal{P}(B)$ but as $C$. More plainly, ``be the change you want to see in the world''.
-
+is an \emph{operationalizable} characterization of local truth: $U$ \emph{forces} $\varphi(x)$, or $U \vDash \phi(\alpha)$.
 
 \section{Mathematics}
 In this section, we introduce the mathematical concepts necessary for our framework, aiming to make them accessible through intuitive explanations and examples.
