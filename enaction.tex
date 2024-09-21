@@ -155,9 +155,11 @@ In what follows, I will illustrate that
 \]
 is a very general expression of local truth. Let $\mathcal{C}$ denote the category of contexts and let $\mathcal{B}$ denote the category of behaviors. Then, enaction is modeled as an adjunction $\mathcal{A} \dashv \mathcal{P}$, where action is a functor $\mathcal{A} \colon \mathcal{C} \to \mathcal{B}$ and perception is a functor $\mathcal{P} \colon \mathcal{B} \to \mathcal{C}$. That is, enaction consists of a bijection
 \[
-    \phi_{CB} \colon \text{Hom} ( \mathcal{A}(C), B ) \to \text{Hom}(C, \mathcal{P}(B))
+    \phi_{CB} \colon \text{Hom} ( \mathcal{A}(C), B ) \cong \text{Hom}(C, \mathcal{P}(B))
 \]
-that is natural in both $C$ and $B$, for any context $C$ and behavior $B$. In other words, each morphism $\mathcal{A}(C) \to B$ of behaviors is \emph{enacted} by a unique morphism $C \to \mathcal{P}(B)$ of contexts.
+that is natural in both $C$ and $B$, for any context $C$ and behavior $B$.
+
+For each transformation of action such that one responds to $C$ not with $\mathcal{A}(C)$ but with $B$, there is a unique transformation of perception such that one perceives $B$ not as $\mathcal{P}(B)$ but as $C$. More plainly, ``be the change you want to see in the world''.
 
 
 \section{Mathematics}
@@ -481,7 +483,7 @@ We have presented a novel framework that models cognition as an adjunction betwe
 \section*{Acknowledgments}
 
 % Optional: Acknowledge individuals or institutions that contributed to the work.
-The author thanks ChatGPT, especially the models 4o and o1-preview.
+The author thanks Michael Smith, Sarah Schienman, Milo Korman, Jay Cullen, Jakob Lovhall, David "Buddy" Ryan, Wyatt Hope, Charles Hourihan and E. Glen Weyl for their participation in fruitful discussions surrounding these subjects.
 
 % Example references. Replace with your actual references.
 \begin{thebibliography}{9}
