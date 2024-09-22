@@ -196,10 +196,10 @@ Let \textbf{Con} denote the category of contexts and let \textbf{Beh} denote the
 
 \begin{itemize}
     \item action is expressed as a functor $\mathcal{A} \colon \textbf{Con} \to \textbf{Beh}$
-    \item perception is expressed as a function $\mathcal{P} \colon \textbf{Beh} \to \textbf{Con}$.
+    \item perception is expressed as a functor $\mathcal{P} \colon \textbf{Beh} \to \textbf{Con}$.
 \end{itemize}
 
-That is, cognition $\Psi$ consists of a bijection
+That is, cognition consists of a bijection
 \[
     \Psi_{CB} \colon \text{Hom} ( \mathcal{A}(C), B ) \cong \text{Hom}(C, \mathcal{P}(B))
 \]
@@ -214,7 +214,7 @@ In what follows, I will demonstrate that the diagram
         U \arrow[r, "\alpha"] \arrow[ru, dashed, "m"] & X \arrow[r, "\varphi(x)"] & \Omega
     \end{tikzcd}
 \]
-is an \emph{operationalizable} characterization of local truth: $U$ \emph{forces} $\varphi(x)$, or $U \vDash \phi(\alpha)$.
+is an \emph{operationalizable}\footnote{Again, in what sense?} characterization of local truth: $U$ \emph{forces} $\varphi(x)$, or $U \vDash \phi(\alpha)$.
 
 \section{Mathematics}
 In this section, we introduce the mathematical concepts necessary for our framework, aiming to make them accessible through intuitive explanations and examples.
