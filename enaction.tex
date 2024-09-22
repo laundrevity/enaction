@@ -111,9 +111,9 @@
 % Section 1
 \section{Introduction}
 
-Understanding cognition remains one of the most challenging and profound quests in both science and philosophy.\footnote{Include Ramachandran's ``holy grail''?} Traditional Western approaches often model cognition as the manipulation of internal representations of an external world, emphasizing a computational view of the mind. In contrast, enactivism, an emerging paradigm in cognitive science, posits that cognition arises through a dynamic interaction between an organism and its environment, without reliance on internal representations \cite{varela1991}.
+Understanding cognition remains one of the most challenging and profound quests in both science and philosophy. Traditional Western approaches often model cognition as the manipulation of internal representations of an external world, emphasizing a computational view of the mind. In contrast, enactivism, an emerging paradigm in cognitive science, posits that cognition arises through a dynamic interaction between an organism and its environment, without reliance on internal representations \cite{varela1991}.
 
-In this work, I aim to provide a rigorous mathematical framework for enactivism by employing tools from category theory and topos theory. These mathematical structures make possible the expression of \textbf{cognition} --- the co-determination of action and perception --- as an \textbf{adjunction}. \emph{This} is the sense in which enaction is embodied\footnote{``His is the song of ice and fire'' joke}. By expressing the self as the initial object in the category of contexts, one\footnote{Or, more aptly, \emph{no} one.} finds a natural correspondence with the Buddhist concept of \emph{śūnyatā} or emptiness \cite{garfield1995}.
+In this work, the author aims to provide a rigorous mathematical framework for enactivism by employing tools from category theory and topos theory. These mathematical structures make possible the expression of \textbf{cognition} --- the co-determination of action and perception --- as an \textbf{adjunction}. \emph{This} is the sense in which enaction is embodied. In expressing the self as the initial object in the category of contexts, one finds a natural resonance with the Buddhist concept of \emph{śūnyatā} or emptiness \cite{garfield1995}.
 
 My goals in this work are threefold:
 
@@ -124,31 +124,24 @@ My goals in this work are threefold:
 
 \end{enumerate}
 
-\subsection{Structure of the Paper}
+\subsection{Structure of the work}
+\begin{enumerate}[start=2,label=\S]
+    \item 2. Provide philosophical motivation, discussing limitations of representational models and introducing enactivism.
+    \item 3. Introduce necessary mathematical architecture in category theory and topos theory.
+    \item 4. Express cognition as an adjunction between action and perception.
+    \item 5. Revisit self as initial object and explore connection to \emph{śūnyatā}.
+    \item 6. Discuss implications for cognitive science and philosophy.
+    \item 7. Relate to existing literature, highlighting similarities and differences.
+    \item 8. Outline future research directions, including empirical validation and theoretical refinement.
+    \item 9. Conclude by summarizing key findings and significance.
+\end{enumerate}
 
-The paper is organized as follows:
+\section{Philosophical motivation}
+Traditionally, Western philosophical thought, particularly in the works of Locke, Descartes, and later Frege and Russell, has conceived of cognition as a representational process. The mind is often viewed as a container of representations of the external world, processed in logical or computational ways.
 
-\begin{itemize}
-    \item In Section 2, I provide the philosophical motivation for our approach, discussing the limitations of representational models and introducing enactivism.
-    \item Section 3 introduces the necessary mathematical background in category theory and topos theory, with intuitive explanations and examples.
-    \item In Section 4, I develop the main framework, expressing cognition as an adjunction between action and perception.
-    \item Section 5 revisits the concept of the self as the initial object and explores its connection to \emph{śūnyatā}.
-    \item Section 6 discusses the implications of our framework for cognitive science and philosophy.
-    \item In Section 7, the work is related to existing literature, highlighting similarities and differences.
-    \item Section 8 outlines future research directions, including empirical validation and further theoretical development.
-    \item I conclude in Section 9 by summarizing my findings and their significance.
-\end{itemize}
+However, modern developments, from Wittgenstein’s linguistic turn to Cohen’s forcing and Kripke’s modal semantics, have shifted the conversation. In cognitive science, this shift mirrors a growing emphasis on relational models of cognition, such as enactivism. This work attempts to reconcile the extremes of rigid, representational models and the excessive flexibility of entirely subjective models by proposing a middle way, similar to the balance found in Eastern philosophical traditions.
 
-
-\section{Philosophical Motivation}
-Understanding cognition has been a central issue in both philosophy and cognitive science. Traditionally, Western philosophical thought, particularly in the works of Locke, Descartes, and later Frege and Russell, has conceived of cognition as a representational process. The mind is often viewed as a container of representations of the external world, processed in logical or computational ways.
-
-However, modern developments, from Wittgenstein’s linguistic turn to Kripke’s modal semantics and Cohen’s forcing, have shifted the conversation. In cognitive science, this shift mirrors a growing emphasis on relational models of cognition, such as enactivism, which we aim to formalize using category theory and topos theory.
-
-Our approach attempts to reconcile the extremes of rigid, representational models and the excessive flexibility of entirely subjective models by proposing a middle way, similar to the balance found in Eastern philosophical traditions.
-
-
-\subsection{Limitations of Representational Models}
+\subsection{Limitations of representational models}
 Traditional cognitive science often relies on the assumption that cognition involves internal representations of an external world. This view, rooted in computationalism, treats the mind as a symbol-manipulating system \cite{fodor1980}. However, this model faces several challenges:
 
 \begin{itemize}
@@ -172,27 +165,23 @@ Topos theory, which generalizes set theory and logic, allows us to express conte
 \subsection{The middle way between rigidity and flexibility}
 Traditional approaches in Western philosophy have struggled to reconcile the dichotomy between rigidity and flexibility. Wittgenstein's \emph{Tractatus} represents an approach mired in excessive rigidity, where the world is treated as a system of facts laid out in logical space, and meaning is strictly determined by reference. In contrast, \emph{Philosophical Investigations} swings toward excessive flexibility, where meaning is entirely a matter of use, creating the potential for a kind of interpretative nihilism.
 
-The ``middle way'' proposed here avoids these extremes, much like certain paths in Eastern philosophy that navigate between objectivism and nihilism. This approach aligns well with the Madhyamaka tradition in Buddhism --- which holds that all phenomena are empty of inherent existence --- but this does not lead to nihilism. Instead, it leads to a relational understanding of phenomena. In understanding cognition as the adjunction between action and perception, this framework seeks to balance a formal structure (derived from topos theory) with the flexibility of enactivism.
+The ``middle way'' proposed here avoids these extremes, much like certain paths in Eastern philosophy that navigate between objectivism and nihilism. This approach aligns well with the Madhyamaka tradition in Buddhism --- which holds that all phenomena are empty of inherent existence --- but this does not lead to nihilism. Instead, it leads to a relational understanding of phenomena. This work seeks to balance the formal structure of topos theory with the flexibility of enactivism by understanding cognition as the adjunction between action and perception.
 
 \subsection{\emph{Śūnyatā} and initial object}
-In a category, the initial object is a sort of starting point. That is, the \emph{initial object} $I$ in a category $\mathcal{C}$ is the unique\footnote{Up to unique isomorphism.} object $I$ (if it exists) with the property that, for any object $X$, there is a unique arrow $I \to X$, and any other object $J$ with an arrow $J \to X$ (uniquely) ``factors through'' $I$ in the sense that the diagram
+The \emph{initial object} $I$ in a category $\mathcal{C}$ is the object $I$\footnote{If it exists.} with the universal property that there is a unique arrow $I \to X$. The universality condition means that for any object $J$ with a unique arrow $J \to X$ there is a unique arrow $k \colon I \to J$ such that
 \[
     \begin{tikzcd}
-        & \{ x \mid \varphi(x) \}  \arrow[r] \arrow[d, tail] & 1 \arrow[d, tail, "\text{true}"] \\
-        U \arrow[r, "\alpha"] \arrow[ru, dashed, "m"] & X \arrow[r, "\varphi(x)"] & \Omega
+        I \arrow[r, "k"] \arrow[d] & J \arrow[ld] \\
+        X
     \end{tikzcd}
 \]
-commutes.
+commutes; $J \to X$ ``factors through'' $I \to X$ ``via'' $k$. The \emph{terminal object} is obtained by flipping the directions of all of the arrows.
 
+In the category of contexts, if the arrow structure is causal then the initial object $0$ is the context that is prior to all other contexts, that is, the unique context from which any other context is possible: \textbf{the self}. And the terminal object is the final context, which one might call God or the universe.
 
-Objects in category theory can often be characterized (up to a unique isomorphism, generally) by \emph{universal properties}. As a simple example, pick a category $\mathcal{C}$ and consider the poset structure induced by $\mathcal{C}$, e.g., $X \leq X^{\prime} \iff X \to X^{\prime}$ is an arrow in $\mathcal{C}$. Then the \emph{initial object}
+In the category of sets \textbf{Set}, the initial object is the empty set $\emptyset$, as for any set $A$ we have a unique arrow $\emptyset \to A$, namely, the empty arrow $\emptyset \subset \emptyset \times A$. The singleton $\{ * \}$ is the terminal object, as there is only one function $A \to \{ * \}$ for any set $A$, namely, the function $a \mapsto *$.
 
-One useful lesson of topos theory is to, whenever helpful, consider corresponding concepts in \textbf{Set}.
-
-empty self as interpreted as object corresponding to self is initial in category of contexts (like empty set is initial in category of sets) and hence topos theory
-
-
-\subsection{Law of the instrument and Wigner's puzzle}
+\subsection{Wigner's puzzle and Maslow's hammer}
 Eugene Wigner famously puzzled over the ``unreasonable effectiveness'' of mathematics in the natural sciences, pointing out that mathematical concepts seem to fit the physical world in surprisingly fruitful and precise ways, even in contexts where this figt appears coincidental. Wigner likened this to having a bunch of keys and always finding the right one for every door, despite not understanding why the key fits.
 
 Maslow's hammer -- the notion that ``if all you have is a hammer, then everything looks like a nail'' --- warns against overapplying a single tool or framework to every problem. The author's past work\footnote{link} on topos theory admittedly biases them towards believing that it can be used ``fruitfully'' in scientific contexts\footnote{Is this right here the experimenter being part of the experiment?}. One \emph{always} does well to recall that cognitive sophistication does not attenuate the bias blind spot\footnote{source!}, and in fact it likely increases it.
@@ -251,8 +240,7 @@ In this section, we introduce the mathematical concepts necessary for our framew
 
 A prototypical example of a category is $\mathbf{Set}$, the category whose objects are sets and whose morphisms are functions between sets.
 
-\subsubsection{Specific Categories}
-
+\subsubsection{Categories of interest}
 \begin{definition}
     Let $\mathbf{Con}$ denote the \textbf{category of contexts}, where:
     \begin{enumerate}
@@ -269,7 +257,6 @@ A prototypical example of a category is $\mathbf{Set}$, the category whose objec
     \end{enumerate}
 \end{definition}
 
-These categories serve as the foundational structures for expressing the dynamics of cognition as an interplay between action and perception.
 
 \subsubsection{Functors}
 
@@ -399,9 +386,9 @@ Sheaf theory provides a way to systematically track locally defined data attache
 
 In this context, $\mathcal{A}$ is the \textbf{left adjoint} and $\mathcal{P}$ is the \textbf{right adjoint} and we write $\mathcal{A} \dashv \mathcal{P}$.
 
-\section{Cognition as Adjunction}
+\section{Cognition as adjunction}
 
-\subsection{Defining the Categories}
+\subsection{Defining the categories}
 
 \begin{definition} The category $\mathbf{Con}$ (Contexts):
 
@@ -456,7 +443,7 @@ In this diagram, the dotted arrow represents the process of enaction, combining 
 
 \begin{definition} An \textbf{initial object} in a category $\mathcal{C}$ is an object $0$ such that for every object $X$ in $\mathcal{C}$, there exists a unique morphism $0 \to X$. \end{definition}
 
-\begin{example} In $\mathbf{Set}$, the empty set $\emptyset$ is the initial object. \end{example}
+\begin{example} In $\mathbf{Set}$, the empty set $\emptyset$ is the initial object. To see this, note that \end{example}
 
 \subsection{Self as the Initial Object}
 
@@ -551,7 +538,7 @@ Exploring how this framework applies to social cognition, emotions, and consciou
 
 \section{Conclusion}
 
-We have presented a novel framework that expresses cognition as an adjunction between action and perception, capturing the dynamic interplay central to enactivism. By conceptualizing the self as the initial object, we align with the philosophical concept of \emph{śūnyatā}, offering a relational understanding of identity. This interdisciplinary approach provides new insights into cognitive science and opens avenues for future research.
+This work has presented a novel framework to expresses cognition as an adjunction between action and perception, capturing the dynamic interplay central to enactivism. By conceptualizing the self as the initial object, we align with the philosophical concept of \emph{śūnyatā}, offering a relational understanding of identity. This interdisciplinary approach provides new insights into cognitive science and opens avenues for future research.
 
 \section*{Acknowledgments}
 
