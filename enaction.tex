@@ -111,9 +111,9 @@
 % Section 1
 \section{Introduction}
 
-Understanding cognition remains one of the most challenging and profound quests in both science and philosophy. (Ramachandran holy grail?) Traditional Western approaches often model cognition as the manipulation of internal representations of an external world, emphasizing a computational view of the mind. In contrast, enactivism, an emerging paradigm in cognitive science, posits that cognition arises through a dynamic interaction between an organism and its environment, without reliance on internal representations \cite{varela1991}.
+Understanding cognition remains one of the most challenging and profound quests in both science and philosophy.\footnote{Include Ramachandran's ``holy grail''?} Traditional Western approaches often model cognition as the manipulation of internal representations of an external world, emphasizing a computational view of the mind. In contrast, enactivism, an emerging paradigm in cognitive science, posits that cognition arises through a dynamic interaction between an organism and its environment, without reliance on internal representations \cite{varela1991}.
 
-In this work, I aim to provide a rigorous mathematical framework for enactivism by employing tools from category theory and topos theory. These mathematical structures make possible the expression of \textbf{cognition} --- the co-evolution of action and perception --- as an \textbf{adjunction}. This is the sense in which the essence of enaction is embodied. By expressing the self as the initial object in the category of contexts, we find a natural correspondence with the Buddhist concept of \emph{śūnyatā} or emptiness \cite{garfield1995}.
+In this work, I aim to provide a rigorous mathematical framework for enactivism by employing tools from category theory and topos theory. These mathematical structures make possible the expression of \textbf{cognition} --- the co-determination of action and perception --- as an \textbf{adjunction}. \emph{This} is the sense in which enaction is embodied\footnote{``His is the song of ice and fire'' joke}. By expressing the self as the initial object in the category of contexts, one\footnote{Or, more aptly, \emph{no} one.} finds a natural correspondence with the Buddhist concept of \emph{śūnyatā} or emptiness \cite{garfield1995}.
 
 My goals in this work are threefold:
 
@@ -141,11 +141,11 @@ The paper is organized as follows:
 
 
 \section{Philosophical Motivation}
-There is something deeply human and relatable about the struggles throughout history to understand the human mind and its relation to the world.
+Understanding cognition has been a central issue in both philosophy and cognitive science. Traditionally, Western philosophical thought, particularly in the works of Locke, Descartes, and later Frege and Russell, has conceived of cognition as a representational process. The mind is often viewed as a container of representations of the external world, processed in logical or computational ways.
 
-Discuss empty self as resolving subjectivism--nihilism tension in ancient Eastern philosophy
+However, modern developments, from Wittgenstein’s linguistic turn to Kripke’s modal semantics and Cohen’s forcing, have shifted the conversation. In cognitive science, this shift mirrors a growing emphasis on relational models of cognition, such as enactivism, which we aim to formalize using category theory and topos theory.
 
-then focus on western tradition: Locke/des Cartes -> Frege, Russell, Wittgenstein (Early -> Later), Kripke, Cohen, Chalmers, Dennett
+Our approach attempts to reconcile the extremes of rigid, representational models and the excessive flexibility of entirely subjective models by proposing a middle way, similar to the balance found in Eastern philosophical traditions.
 
 
 \subsection{Limitations of Representational Models}
@@ -163,13 +163,27 @@ Enactivism offers an alternative by proposing that cognition arises through an o
 
 \begin{itemize} \item Autonomy: Cognitive systems are self-organizing and self-maintaining. \item Embodiment: The body shapes the mind, and cognition cannot be separated from the physical form. \item Embeddedness: Cognition is situated within and cannot be isolated from the environment. \item Dynamic Co-emergence: Organism and environment co-determine each other in a continuous feedback loop \cite{varela1991}. \end{itemize}
 
+\subsection{Category theory in enactivism}
+The use of category theory, particularly topos theory, offers a rigorous and formal structure to express enactivism's core principles. Enactivism, at its heart, emphasizes the dynamic interplay between action and perception, a process that can be modeled as an adjunction between functors. In category theory, functors preserve structure between categories, and adjunctions reflect a reciprocal relationship. In the same way, cognition emerges as a reciprocal relationship between an agent's actions and perceptions.
 
-\subsection{Rock and hard place between Tractatus and Phil Inv}
-seemingly inescapable rock and hard place: subjectivism (Tractatus) and nihilism (Philosophical Investigations).
+Topos theory, which generalizes set theory and logic, allows us to express contexts and behaviors as categories with their own internal logics. This brings clarity to the relational and context-dependent nature of cognition, paralleling the way enactivism rejects a static, representational self. This bridge provides a novel interdisciplinary method to formalize cognition, without reducing it to either extreme of objectivism or subjectivism.
 
+
+\subsection{The middle way between rigidity and flexibility}
+Traditional approaches in Western philosophy have struggled to reconcile the dichotomy between rigidity and flexibility. Wittgenstein's \emph{Tractatus} represents an approach mired in excessive rigidity, where the world is treated as a system of facts laid out in logical space, and meaning is strictly determined by reference. In contrast, \emph{Philosophical Investigations} swings toward excessive flexibility, where meaning is entirely a matter of use, creating the potential for a kind of interpretative nihilism.
+
+The ``middle way'' proposed here avoids these extremes, much like certain paths in Eastern philosophy that navigate between objectivism and nihilism. This approach aligns well with the Madhyamaka tradition in Buddhism --- which holds that all phenomena are empty of inherent existence --- but this does not lead to nihilism. Instead, it leads to a relational understanding of phenomena. In understanding cognition as the adjunction between action and perception, this framework seeks to balance a formal structure (derived from topos theory) with the flexibility of enactivism.
 
 \subsection{\emph{Śūnyatā} and initial object}
-The initial object is the unique place where one can always start: that is, the unique\footnote{Up to unique isomorphism.} object $I$ (if it exists) in a category $\mathcal{C}$
+In a category, the initial object is a sort of starting point. That is, the \emph{initial object} $I$ in a category $\mathcal{C}$ is the unique\footnote{Up to unique isomorphism.} object $I$ (if it exists) with the property that, for any object $X$, there is a unique arrow $I \to X$, and any other object $J$ with an arrow $J \to X$ (uniquely) ``factors through'' $I$ in the sense that the diagram
+\[
+    \begin{tikzcd}
+        & \{ x \mid \varphi(x) \}  \arrow[r] \arrow[d, tail] & 1 \arrow[d, tail, "\text{true}"] \\
+        U \arrow[r, "\alpha"] \arrow[ru, dashed, "m"] & X \arrow[r, "\varphi(x)"] & \Omega
+    \end{tikzcd}
+\]
+commutes.
+
 
 Objects in category theory can often be characterized (up to a unique isomorphism, generally) by \emph{universal properties}. As a simple example, pick a category $\mathcal{C}$ and consider the poset structure induced by $\mathcal{C}$, e.g., $X \leq X^{\prime} \iff X \to X^{\prime}$ is an arrow in $\mathcal{C}$. Then the \emph{initial object}
 
@@ -179,15 +193,13 @@ empty self as interpreted as object corresponding to self is initial in category
 
 
 \subsection{Law of the instrument and Wigner's puzzle}
-\begin{quotation}
-    The first point is that mathematical concepts turn up in entirely unexpected con- nections. Moreover, they often permit an unexpectedly close and accurate description of the phenomena in these connections. Secondly, just because of this circumstance, and because we do not understand the reasons of their usefulness, we cannot know whether a theory formulated in terms of mathematical concepts is uniquely appropriate. We are in a position similar to that of a man who was provided with a bunch of keys and who, having to open several doors in suc- cession, always hit on the right key on the first or second trial. He became skeptical concerning the uniqueness of the coordination between keys and doors.
-\end{quotation}
+Eugene Wigner famously puzzled over the ``unreasonable effectiveness'' of mathematics in the natural sciences, pointing out that mathematical concepts seem to fit the physical world in surprisingly fruitful and precise ways, even in contexts where this figt appears coincidental. Wigner likened this to having a bunch of keys and always finding the right one for every door, despite not understanding why the key fits.
 
-Eugene Wigner, “The Unreasonable Effectiveness of Mathematics in the Natural Sciences,” in Communica- tions in Pure and Applied Mathematics, vol. 13, No. I (February 1960). New York: John Wiley \& Sons, Inc. Copyright 1960 by John Wiley \& Sons, Inc.
+Maslow's hammer -- the notion that ``if all you have is a hammer, then everything looks like a nail'' --- warns against overapplying a single tool or framework to every problem. The author's past work\footnote{link} on topos theory admittedly biases them towards believing that it can be used ``fruitfully'' in scientific contexts\footnote{Is this right here the experimenter being part of the experiment?}. One \emph{always} does well to recall that cognitive sophistication does not attenuate the bias blind spot\footnote{source!}, and in fact it likely increases it.
 
-law of the instrument => secret to wigner's puzzle: self and world (0 and 1) have reciprocal structure due to adjunction
+If all you have is a hammer, then why bother with anything that isn't a nail? Nails are the things to use the hammer with.
 
-the idea is not to break the puzzle with our hammer but to understand the stuff-of-stuff and thereby craft a key
+In the case of Wigner's riddle, adjunctions in category theory show how not to break the puzzle by smashing it with our hammer but to instead immerse it in a liquid and wait for its exterior to gradually soften\footnote{Grothendieck source}.
 
 \subsection{Preview}
 
@@ -474,11 +486,20 @@ Consider an agent navigating a maze.
 
 The adjunction captures how the agent's decision to move influences its perception and how that perception informs future actions.
 
-\subsection{Language Acquisition}
+\subsection{Expanded Example: Language Acquisition}
 
-In language learning:
+Traditional models of language acquisition often rely on a representational framework where the brain is seen as storing internal models of grammar and vocabulary, which are then retrieved and applied during language use. In contrast, our adjunction-based model emphasizes the dynamic interaction between the agent and its linguistic environment.
 
-\begin{itemize} \item \textbf{Contexts}: Linguistic environments, such as exposure to certain vocabulary or grammar structures. \item \textbf{Behaviors}: Speech acts or language production attempts. \item \textbf{Adjunction}: The interplay between hearing language (perception) and speaking (action), leading to language acquisition. \end{itemize}
+For instance, in language learning:
+
+\begin{itemize}
+    \item \textbf{Contexts}: Linguistic environments (e.g., hearing spoken language, reading text).
+    \item \textbf{Behaviors}: Speech acts (e.g., speaking, writing, gesturing).
+    \item \textbf{Action Functor} $\mathcal{A}$: Maps contexts (hearing a word) to behaviors (attempting to use the word).
+    \item \textbf{Perception Functor} $\mathcal{P}$: Maps behaviors (the act of speaking) to resulting contexts (the listener’s reaction, or self-correction based on feedback).
+\end{itemize}
+
+In our model, this interaction forms a natural adjunction: for every linguistic context, there is a corresponding set of actions that influence the learner's perception, which in turn modifies future actions. Unlike rigid representational models, this adjunction-based framework captures the dynamic, relational nature of language acquisition as proposed by enactivism.
 
 \subsection{Implications for Artificial Intelligence}
 
@@ -486,17 +507,13 @@ Modeling cognition in this way can inform the development of AI systems that lea
 
 \section{Implications for Cognitive Science and Philosophy}
 
-\subsection{Relational Cognition}
+\subsection{Hard problem of consciousness}
+This framework not only aligns with enactivism but also contributes to ongoing debates in philosophy of mind, particularly concerning the ``hard problem'' of consciousness (Chalmers). By rejecting the notion of a fixed, representational self and adopting a relational view through the adjunction framework, we propose that consciousness emerges through the ongoing interaction between the self and its contexts.
 
-Our framework emphasizes that cognition is not a computation over representations but a relational process emerging from interactions.
+This relational view contrasts with modern theories such as Dennett's "self as a narrative" and Metzinger's "Ego Tunnel," which treat the self as either an illusion or a construct. Instead, our model suggests that the self, as the initial object, is devoid of intrinsic structure and gains meaning only through its dynamic relations to contexts --- paralleling both enactivism and Eastern philosophies such as \emph{śūnyatā}.
+
 
 \subsection{Context-Dependence and Situatedness}
-
-
-
-
-
-
 By modeling contexts explicitly, we highlight the importance of situatedness in cognitive processes, aligning with embodied cognition theories \cite{clark1997}.
 
 \subsection{Bridging Eastern and Western Thought}
@@ -523,9 +540,10 @@ The concept of the self as relational is explored in both Western \cite{heidegge
 
 Further research will focus on precisely defining the objects and morphisms in $\mathbf{Con}$ and $\mathbf{Beh}$, potentially using empirical data.
 
-\subsection{Empirical Validation}
+\subsection{Potential Empirical Validation}
+While this framework is currently theoretical, it lends itself to empirical validation in domains such as cognitive neuroscience or AI. For instance, one can design experiments where an agent (biological or artificial) interacts with an environment, and one can track how action-perception cycles form adjunctions that influence behavior over time.
 
-We aim to test our model by applying it to specific cognitive tasks and comparing predictions with experimental results.
+Specifically, reinforcement learning systems, where an agent learns through interaction with an environment, could be adapted to model the adjunction $\mathcal{A} \dashv \mathcal{P}$. By comparing this adjunction-based model to traditional AI systems that rely on internal representations, we can empirically investigate whether the adjunction model provides a more accurate or efficient description of cognitive processes.
 
 \subsection{Extensions to Other Cognitive Domains}
 
