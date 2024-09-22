@@ -37,7 +37,7 @@
 
 \title{Adjunctive cognition: A topos-theoretic framework for enactivism}
 \author{Conor L. Mahany\footnote{
-    Email: conor.mahany@proton.me. The author is a hobbyist researcher in the field of cognitive science with a focus on enactivism and formal methods. Barring some unforeseen circumstances, the most recent version of this work can be found here \href{https://github.com/laundrevity/enaction/blob/master/enaction.pdf}{https://github.com/laundrevity/enaction/blob/master/enaction.pdf}.
+    Email: conor.mahany@proton.me. Barring some unforeseen circumstances, the most recent version of this work can be found here \href{https://github.com/laundrevity/enaction/blob/master/enaction.pdf}{https://github.com/laundrevity/enaction/blob/master/enaction.pdf}.
 }}
 \date{\today}
 
@@ -55,7 +55,7 @@
 % Quotes section
 
 \begin{customquote}
-    If I were to say that the so-called philosophy of this fellow Hegel is a colossal piece of mystification which will yet provide posterity with an inexhaustible theme for laughter at our times, that it is a pseudo-philosophy paralyzing all mental powers, stifling all real thinking, and, by the most outrageous misuse of language, putting in its place the \emph{hollowest}\footnote{Emphasis \emph{emphatically} added.}, most senseless, thoughtless, and, as is confirmed by its success, most stupefying verbiage, I should be quite right.” \\
+    If I were to say that the so-called philosophy of this fellow Hegel is a colossal piece of mystification which will yet provide posterity with an inexhaustible theme for laughter at our times, that it is a pseudo-philosophy paralyzing all mental powers, stifling all real thinking, and, by the most outrageous misuse of language, putting in its place the \textbf{hollowest}, most senseless, thoughtless, and, as is confirmed by its success, most stupefying verbiage, I should be quite right.” \\
     \begin{center}
         Arthur Schopenhauer, \emph{On the Basis of Morality} (1839)
     \end{center}
@@ -113,14 +113,13 @@
 
 Understanding cognition remains one of the most challenging and profound quests in both science and philosophy. Traditional Western approaches often model cognition as the manipulation of internal representations of an external world, emphasizing a computational view of the mind. In contrast, enactivism, an emerging paradigm in cognitive science, posits that cognition arises through a dynamic interaction between an organism and its environment, without reliance on internal representations \cite{varela1991}.
 
-In this work, the author aims to provide a rigorous mathematical framework for enactivism by employing tools from category theory and topos theory. These mathematical structures make possible the expression of \textbf{cognition} --- the co-determination of action and perception --- as an \textbf{adjunction}. \emph{This} is the sense in which enaction is embodied. In expressing the self as the initial object in the category of contexts, one finds a natural resonance with the Buddhist concept of \emph{śūnyatā} or emptiness \cite{garfield1995}.
+In this work, I develop a rigorous mathematical framework for enactivism using tools from category theory and topos theory. These mathematical structures illuminate the dynamic interplay between action and perception, capturing the essence of enaction as an adjunction. Morever, recognizing the self as the initial object within the category of contexts reveals a natural alignment with the Buddhist concept of \emph{śūnyatā} or emptiness \cite{garfield1995}.
 
-My goals in this work are threefold:
-
+The goals in this work are threefold:
 \begin{enumerate}
     \item To introduce and justify the use of category theory and topos theory in modeling cognitive processes.
-    \item To provide concrete examples that illustrate how action and perception can be modeled as functors between categories.
-    \item To discuss the philosophical implications of this framework, especially the connection between the empty self and \emph{śūnyatā}, and its impact on cognitive science.
+    \item To offer concrete examples that demonstrate how action and perception can be modeled as functors between categories.
+    \item To explore the philosophical implications of this framework, particularly the connection between the empty self and \emph{śūnyatā}, and its potential impact on cognitive science.
 
 \end{enumerate}
 
@@ -133,22 +132,24 @@ My goals in this work are threefold:
     \item 6. Discuss implications for cognitive science and philosophy.
     \item 7. Relate to existing literature, highlighting similarities and differences.
     \item 8. Outline future research directions, including empirical validation and theoretical refinement.
-    \item 9. Conclude by summarizing key findings and significance.
+    \item 9. Conclude by summarizing key fisndings and significance.
 \end{enumerate}
 
 \section{Philosophical motivation}
-Traditionally, Western philosophical thought, particularly in the works of Locke, Descartes, and later Frege and Russell, has conceived of cognition as a representational process. The mind is often viewed as a container of representations of the external world, processed in logical or computational ways.
+Western philosophical thought, particularly in the works of Locke, Descartes, and later Frege and Russell, has traditionally conceived of cognition as a representational process. The mind is often viewed as a container of representations of the external world, processed in logical or computational ways.
 
 However, modern developments, from Wittgenstein’s linguistic turn to Cohen’s forcing and Kripke’s modal semantics, have shifted the conversation. In cognitive science, this shift mirrors a growing emphasis on relational models of cognition, such as enactivism. This work attempts to reconcile the extremes of rigid, representational models and the excessive flexibility of entirely subjective models by proposing a middle way, similar to the balance found in Eastern philosophical traditions.
 
 \subsection{Limitations of representational models}
-Traditional cognitive science often relies on the assumption that cognition involves internal representations of an external world. This view, rooted in computationalism, treats the mind as a symbol-manipulating system \cite{fodor1980}. However, this model faces several challenges:
+Building upopn this philosophical backdrop, it's essential to scrutinize the foundational assumptions of representational models in cognitive science. Traditional cognitive science often relies on the assumption that cognition involves internal representations of an external world. This view, rooted in computationalism, treats the mind as a symbol-manipulating system \cite{fodor1980}. However, this model faces several challenges:
 
 \begin{itemize}
-    \item Frame Problem: Determining which aspects of a complex environment are relevant to a given context is computationally intractable \cite{pylyshyn1987}.
-    \item Embodiment: It neglects the role of the body and the environment in shaping cognitive processes \cite{clark1997}.
-    \item Dynamic Interaction: It fails to account for the continuous and reciprocal interaction between an organism and its environment \cite{thompson2007}.
+    \item \textbf{Frame Problem:} Determining which aspects of a complex and ever-changing environment are relevant to a given context is computationally intractable. This leads to inefficiencies and an inability to adapt swiftly to novel situations \cite{pylyshyn1987}.
+    \item \textbf{Embodiment:} Representational models often neglect the profound influence of the body and its interactions with the environment in shaping cognitive processes. Embodied cognition research demonstrates that bodily states are integral to mental functions, a dimension inadequately captured by purely representational systems \cite{clark1997}.
+    \item \textbf{Dynamic Interaction:} Cognition is not a passive reception of representations but involves continuous and reciprocal interactions between an organism and its environment. Representational models, with their emphasis on static internal states, fail to account for this dynamic co-evolution \cite{thompson2007}.
 \end{itemize}
+
+These inherent limitations of representational models pave the way for enactivism, which emphasizes the inseparable interplay between an organism and its environment. Moreover, these critiques resonate with Eastern philosophical perspectives that challenge inherent notions of representation and existence.
 
 \subsection{Enactivism}
 
